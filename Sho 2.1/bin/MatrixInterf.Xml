@@ -1,0 +1,829 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "MatrixInterfn4vs2012"
+    </assembly>
+    <members>
+        <member name="M:ShoNS.Array.InternalErrorException.#ctor(System.String,System.Exception)">
+            <summary>Constructor</summary>
+            <param name="s">The message that describes the error</param>
+            <param name="inner">The exception that is the cause of the current exception</param>
+        </member>
+        <member name="M:ShoNS.Array.InternalErrorException.#ctor(System.String)">
+            <summary>Constructor</summary>
+            <param name="s">The message that describes the error</param>
+        </member>
+        <member name="M:ShoNS.Array.InternalErrorException.#ctor">
+            <summary>Constructor</summary>
+        </member>
+        <member name="T:ShoNS.Array.InternalErrorException">
+            <summary>This exception is thrown if an internal error happens.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayNotPositiveDefiniteException.#ctor(System.String,System.Exception)">
+            <summary>Constructor</summary>
+            <param name="s">The message that describes the error</param>
+            <param name="inner">The exception that is the cause of the current exception</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayNotPositiveDefiniteException.#ctor(System.String)">
+            <summary>Constructor</summary>
+            <param name="s">The message that describes the error</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayNotPositiveDefiniteException.#ctor">
+            <summary>Constructor</summary>
+        </member>
+        <member name="T:ShoNS.Array.ArrayNotPositiveDefiniteException">
+            <summary>This exception is thrown if the array not positive definite.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayComputationFailedException.#ctor(System.String,System.Exception)">
+            <summary>Constructor</summary>
+            <param name="s">The message that describes the error</param>
+            <param name="inner">The exception that is the cause of the current exception</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayComputationFailedException.#ctor(System.String)">
+            <summary>Constructor</summary>
+            <param name="s">The message that describes the error</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayComputationFailedException.#ctor">
+            <summary>Constructor</summary>
+        </member>
+        <member name="T:ShoNS.Array.ArrayComputationFailedException">
+            <summary>This exception is thrown when array computations fail.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayLoadFailedException.#ctor(System.String,System.Exception)">
+            <summary>Constructor</summary>
+            <param name="s">The message that describes the error</param>
+            <param name="inner">The exception that is the cause of the current exception</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayLoadFailedException.#ctor(System.String)">
+            <summary>Constructor</summary>
+            <param name="s">The message that describes the error</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayLoadFailedException.#ctor">
+            <summary>Constructor</summary>
+        </member>
+        <member name="T:ShoNS.Array.ArrayLoadFailedException">
+            <summary>This exception is thrown when the ArrayT assembly cannot be loaded.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IShoInternalsDenseNumeric`1.SubtractBroadcast(ShoNS.Array.INumArray`1{`0})">
+            <summary>Subtracts two arrays.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IShoInternalsDenseNumeric`1.AddBroadcast(ShoNS.Array.INumArray`1{`0})">
+            <summary>Adds two arrays.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IShoInternalsDenseNumeric`1.ElementDivideBroadcast(ShoNS.Array.INumArray`1{`0})">
+            <summary>Divides two arrays element-wise.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IShoInternalsDenseNumeric`1.ElementMultiplyBroadcast(ShoNS.Array.INumArray`1{`0})">
+            <summary>Multiplies two arrays element-wise.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArrayAccessor`1.RowElements(System.Int32)">
+            <summary>Returns an IEnumerable object that can be used to iterate over the elements of a given row.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArrayAccessor`1.ColumnElements(System.Int32)">
+            <summary>Returns an IEnumerable object that can be used to iterate over the elements of a given column.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayAccessor`1.Cols">
+            <summary>Returns an IEnumerable object that can be used to iterate over the columns of the array.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayAccessor`1.Rows">
+            <summary>Returns an IEnumerable object that can be used to iterate over the rows of the array.</summary>
+        </member>
+        <member name="T:ShoNS.Array.ISparseNumArray`1">
+            <summary>This interface provides methods and properties for sparse numerical arrays.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ExportToFile(System.String,ShoNS.Array.SparseFileFormat,System.Boolean)">
+            <summary>Create a file in COO format with specific data indexing (0 or 1) from sparse object.</summary>
+            <param name="fileName" type="string">The name of input file.</param>
+            <param name="fileFormat" type="SparseFileFormat">Input file format: {MM, COOH, MTL, HB}.</param>
+            <param name="zeroIndexing" type="bool">File data indexing is 0 based.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ImportFromFile(System.String,ShoNS.Array.SparseFileFormat,System.Boolean)">
+            <summary>Initialize sparse array from file stored in COO format with specific data indexing (0 or 1).</summary>
+            <param name="fileName" type="string">The name of input file.</param>
+            <param name="fileFormat" type="SparseFileFormat">Input file format: {MM, COOH, MTL, HB}.</param>
+            <param name="zeroIndexing" type="bool">File data indexing is 0 based.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ExportToLists(System.Collections.Generic.List`1{System.Int32}@,System.Collections.Generic.List`1{System.Int32}@,System.Collections.Generic.List`1{`0}@,ShoNS.Array.SortOrder)">
+            <summary>Constructs triplet lists with specific sort order from 2D sparse array.</summary>
+            <param name="index0List">The first list of indices.</param>
+            <param name="index1List">The second list of indices.</param>
+            <param name="outputValueList">The list of corresponding values.</param>
+            <param name="outputOrder">The linear sort order of output lists.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ExportToLists(System.Collections.Generic.List`1{System.Int32}@,System.Collections.Generic.List`1{`0}@)">
+            <summary>Constructs a pair of lists with specific sort order from  1D sparse array.</summary>
+            <param name="index0List">The list of row indices in Coordinate format.</param>
+            <param name="outputValueList">The list of corresponding values.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ExportToList(System.Collections.IList@,System.Collections.IList@,System.Collections.IList@,ShoNS.Array.SortOrder)">
+            <summary>Constructs triplet lists with specific sort order from 2D sparse array.</summary>
+            <param name="index0List" type="IList">The list of row indices in Coordinate format.</param>
+            <param name="index1List" type="IList">The list of corresponding column indices in Coordinate format.</param>
+            <param name="outputValueList" type="IList">The list of corresponding values.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ExportToList(System.Collections.IList@,System.Collections.IList@)">
+            <summary>Constructs a pair of lists with specific sort order from  1D sparse array.</summary>
+            <param name="index0List" type="IList">The list of indices in Coordinate format.</param>
+            <param name="outputValueList" type="IList">The list of corresponding values.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ImportFromList(System.Collections.IList,System.Collections.IList,System.Collections.IList,ShoNS.Array.SortOrder)">
+            <summary>Initialize 2D sparse array from triplet lists with specific sort order.</summary>
+            <param name="index0List" type="IList">The first list of indices.</param>
+            <param name="index1List" type="IList">The second list of indices.</param>
+            <param name="inputValueList" type="IList">The list of corresponding values.</param>
+            <param name="inputOrder" type="SortOrder">The linear sort order of input lists.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ImportFromList(System.Collections.IList,System.Collections.IList,System.Boolean)">
+            <summary>Initialize 1D sparse array from pair of lists with specific sort order.</summary>
+            <param name="index0List" type="IList">The list of indices in Coordinate format.</param>
+            <param name="inputValueList" type="IList">The list of corresponding values.</param>
+            <param name="sortedInput" type="bool">The input list is sorted.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.RemoveZeros">
+            <summary>Delete zero entries.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.SwapRows(System.Int32,System.Int32)">
+            <summary>Swaps the values in the two rows.</summary>
+            <param name="rowIndex1" type="int">The index of the first row to swap.</param>
+            <param name="rowIndex2" type="int">The index of the second row to swap.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.CommitValues">
+            <summary>Commits the values added by AccumulateValue.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.AccumulateValue(System.Int32,System.Int32,`0)">
+            <summary>Used to add or change an element in a sparse array.</summary>
+            <param name="rowIndex" type="int">The row index of the element.</param>
+            <param name="colIndex" type="int">The column index of the element.</param>
+            <param name="value">The value to set.</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.AccumulateValue(System.Int32,`0)">
+            <summary>Used to add or change an element in a 1D sparse array.</summary>
+            <param name="index" type="int">The index of the element.</param>
+            <param name="value">The value to set.</param>
+        </member>
+        <member name="P:ShoNS.Array.ISparseArray`1.StorageFormat">
+            <summary>Returns the storage format of the sparse array.</summary>
+        </member>
+        <member name="P:ShoNS.Array.ISparseArray`1.NullValue">
+            <summary>Returns the null (unset) value for the array.</summary>
+        </member>
+        <member name="P:ShoNS.Array.ISparseArray`1.CountCells">
+            <summary>Returns the number of set items in the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.Densify">
+            <summary>Returns dense array copy of the sparse array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.GetColsSparse(System.Collections.Generic.IList`1{System.Int32})">
+            <summary>Returns one or more columns in a new sparse array.</summary>
+            <param name="colsToGet">List of column indices to retrieve</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.GetColSparse(System.Int32)">
+            <summary>Returns a column in a sparse vector.</summary>
+            <param name="colIndex">The index of the column to retrieve</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.GetRowsSparse(System.Collections.Generic.IList`1{System.Int32})">
+            <summary>Returns one or more rows in a new sparse array.</summary>
+            <param name="rowsToGet">List of row indices to retrieve</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.GetRowSparse(System.Int32)">
+            <summary>Returns a row in a sparse vector.</summary>
+            <param name="rowIndex">The index of the row to retrieve</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.GetCellIndex(System.Int32,System.Int32)">
+            <summary>Returns the cell index corresponding to the given array indices, returns -1 for unset elements.</summary>
+            <param name="rowIndex">The index of the row to retrieve</param>
+            <param name="colIndex">The index of the column to retrieve</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.GetCellValue(System.Int32)">
+            <summary>Returns the value of the array at the given cell index.</summary>
+            <param name="cellIndex">The index of the cell to retrieve</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ColumnElementValues(System.Int32)">
+            <summary>Returns a list of the values of the set items in the given column.</summary>
+            <param name="colIndex">Column index</param>
+            <exception cref="T:System.NotImplementedException">Thrown when array not in CSC format</exception>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ColumnElementRows(System.Int32)">
+            <summary>Returns a list of the row indices of the set items in the given column.</summary>
+            <param name="colIndex">Column index</param>
+            <exception cref="T:System.NotImplementedException">Thrown when array not in CSC format</exception>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.ColumnLength(System.Int32)">
+            <summary>Returns the number of set items in the given column.</summary>
+            <param name="colIndex">Column index</param>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.RowElementValues(System.Int32)">
+            <summary>Returns a list of the values of the set items in the given row.</summary>
+            <param name="rowIndex">Row index</param>
+            <exception cref="T:System.NotImplementedException">Thrown when array not in CSR format</exception>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.RowElementColumns(System.Int32)">
+            <summary>Returns a list of the column indices of the set items in the given row.</summary>
+            <param name="rowIndex">Row index</param>
+            <exception cref="T:System.NotImplementedException">Thrown when array not in CSR format</exception>
+        </member>
+        <member name="M:ShoNS.Array.ISparseArray`1.RowLength(System.Int32)">
+            <summary>Returns the number of set items in the given row.</summary>
+            <param name="rowIndex">Row index</param>
+        </member>
+        <member name="T:ShoNS.Array.ISparseArray`1">
+            <summary>This interface provides methods and properties for sparse arrays.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="M:ShoNS.Array.IComplexArray`1.ConjTranspose">
+            <summary>Returns the conjugate transpose of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IComplexArray`1.Conj">
+            <summary>Returns the conjugate of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IComplexArray`1.Abs">
+            <summary>Returns the absolute value for each element in the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IComplexArray`1.Imag">
+            <summary>Returns the imaginary portion of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IComplexArray`1.Real">
+            <summary>Returns the real portion of the array.</summary>
+        </member>
+        <member name="T:ShoNS.Array.IComplexArray`1">
+            <summary>This interface provides methods for complex arrays.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementBetween(`0,`0)">
+            <summary>Finds all of the entries in this array that are between the two input values, inclusively.</summary>
+            <param name="value1">Value 1</param>
+            <param name="value2">Value 2</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementNE(ShoNS.Array.IArrayBase)">
+            <summary>Finds all of the entries in this array that are not equal to the righthand array.</summary>
+            <param name="otherArray">Array on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementNE(`0)">
+            <summary>Finds all of the entries in this array that are not equal to the righthand value.</summary>
+            <param name="value">Value on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementEQ(ShoNS.Array.IArrayBase)">
+            <summary>Finds all of the entries in this array that are equal to the righthand array.</summary>
+            <param name="otherArray">Array on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementEQ(`0)">
+            <summary>Finds all of the entries in this array that are equal to the righthand value.</summary>
+            <param name="value">Value on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementGE(ShoNS.Array.IArrayBase)">
+            <summary>Finds all of the entries in lefthand array that are greater or equal to the righthand array.</summary>
+            <param name="otherArray">Array on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementGE(`0)">
+            <summary>Finds all of the entries in lefthand array that are greater or equal to the righthand value.</summary>
+            <param name="value">Value on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementGT(ShoNS.Array.IArrayBase)">
+            <summary>Finds all of the entries in the lefthand array that are greater than the righthand array.</summary>
+            <param name="otherArray">Array on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementGT(`0)">
+            <summary>Finds all of the entries in the lefthand array that are greater than the righthand value.</summary>
+            <param name="value">Value on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementLE(ShoNS.Array.IArrayBase)">
+            <summary>Finds all of the entries in the lefthand array that are less or equal to the righthand array.</summary>
+            <param name="otherArray">Array on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementLE(`0)">
+            <summary>Finds all of the entries in the lefthand array that are less or equal to the righthand value.</summary>
+            <param name="value">Value on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementLT(ShoNS.Array.IArrayBase)">
+            <summary>Finds all of the entries in lefthand array that are less than the righthand array.</summary>
+            <param name="otherArray">Array on the right</param>
+        </member>
+        <member name="M:ShoNS.Array.IElementCompare`1.ElementLT(`0)">
+            <summary>Finds all of the entries in lefthand array that are less than the righthand value</summary>
+            <param name="value">Value on the right</param>
+        </member>
+        <member name="T:ShoNS.Array.IElementCompare`1">
+            <summary>This interface provides elementwise comparison methods for arrays.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="P:ShoNS.Array.INumArray`1.Finite">
+            <summary>Returns true if the array does not contain NaN, or infinity values.</summary>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.MaxIndex">
+            <summary>Returns the maximum value of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.MinIndex">
+            <summary>Returns the minimum value of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Max">
+            <summary>Returns the maximum value of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Min">
+            <summary>Returns the minimum value of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Sum">
+            <summary>Returns the sum of all elements of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Trace">
+            <summary>Computes the trace of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.RDivide(`0)">
+            <summary>From a value, divides each element of the array.</summary>
+            <param name="value">Value from which to divide</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.RSubtract(`0)">
+            <summary>From a value, subtracts each value of the array.</summary>
+            <param name="value">Value to subtract</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Divide(`0)">
+            <summary>Divides each element of the array by a value.</summary>
+            <param name="value">Value to divide</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Multiply(`0)">
+            <summary>Multiplies each element of the array by a value.</summary>
+            <param name="value">Value to multiply</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Subtract(`0)">
+            <summary>Subtracts a value from each element of the array.</summary>
+            <param name="value">Value to subtract</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Add(`0)">
+            <summary>Adds a value to each element of the array.</summary>
+            <param name="value">Value to add</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Dot(ShoNS.Array.INumArray`1{`0})">
+            <summary>Computes the vector dot product.</summary>
+            <param name="otherVector">Vector to dot.</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.ElementDivide(ShoNS.Array.INumArray`1{`0})">
+            <summary>Divides the elements of two arrays.</summary>
+            <param name="otherArray">Array on the right side.</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.ElementMultiply(ShoNS.Array.INumArray`1{`0})">
+            <summary>Multiplies two arrays element-wise.</summary>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Multiply(ShoNS.Array.INumArray`1{`0})">
+            <summary>Matrix multiply of this array by another.</summary>
+            <param name="otherArray">The other matrix.</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Subtract(ShoNS.Array.INumArray`1{`0})">
+            <summary>Subtracts two arrays.</summary>
+            <param name="otherArray">Other array to subtract</param>
+        </member>
+        <member name="M:ShoNS.Array.INumArray`1.Add(ShoNS.Array.INumArray`1{`0})">
+            <summary>Adds two arrays.</summary>
+            <param name="otherArray">Other array to add</param>
+        </member>
+        <member name="T:ShoNS.Array.INumArray`1">
+            <summary>This interface provides methods and properties for numerical arrays.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="M:ShoNS.Array.IArrayEnumerable`1.AlongDim(System.Int32)">
+            <summary>Returns an IEnumerable object that can be used to iterate along the dimension of an array</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayEnumerable`1.Elements">
+            <summary>Returns an IEnumerable object that can be used to iterate over the elements of the array.</summary>
+        </member>
+        <member name="T:ShoNS.Array.IArrayEnumerable`1">
+            <summary>This interface provides enumerators over dimensions and elements of a matrix.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.ToVector">
+            <summary>Makes a vector, copying the elements in row-column order.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.ToFlatSystemArray">
+            <summary>Creates a copy of the array as a one-dimensional System.Array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.ToSystemArray">
+            <summary>Creates a copy of the array as a two-dimensional System.Array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.Deepen">
+            <summary>Deepens the backing storage of the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.CopyShallow">
+            <summary>Makes a shallow copy of the array; the new array shares its storage with the original array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.CopyDeep">
+            <summary>Makes a deep copy of the array; the new array has its own storage.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArray`1.T">
+            <summary>Transposes the 1st and 2nd dimensions of the array, making a shallow copy.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.Transpose">
+            <summary>Transposes the 1st and 2nd dimensions of the array, making a shallow copy.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.TransposeDeep">
+            <summary>Transposes the 1st and 2nd dimensions of the array, making a deep copy.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArray`1.Diagonal">
+            <summary>Returns the main diagonal of the array as a vector or sets the main diagonal to the input vector.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(`0,System.Collections.Generic.IList`1{ShoNS.Array.ISlice})">
+            <summary>Sets all elements of the slice to the scalar, primarily for multidimensional arrays.</summary>
+            <param name="value">Input value</param>
+            <param name="slices">List of slice objects</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(ShoNS.Array.IArray`1{`0},System.Collections.Generic.IList`1{ShoNS.Array.ISlice})">
+            <summary>Sets the slice to the contents of the input array, primarily for multidimensional arrays.</summary>
+            <param name="arrayToCopy">Input array</param>
+            <param name="slices">List of slice objects</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSlice(System.Collections.Generic.IList`1{ShoNS.Array.ISlice})">
+            <summary>Returns a slice of the array as a shallow copy, primarily for multidimensional arrays.</summary>
+            <param name="slices">List of slice objects</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSliceDeep(System.Collections.Generic.IList`1{ShoNS.Array.ISlice})">
+            <summary>Returns a slice of the array as a deep copy, primarily for multidimensional arrays.</summary>
+            <param name="slices">List of slice objects</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(`0,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Sets all elements of the slice to the scalar</summary>
+            <param name="value">Input value</param>
+            <param name="firstRow" type="int">First row number in the slice.</param>
+            <param name="lastRowInclusive" type="int">Maximum row number (inclusive) in the slice.</param>
+            <param name="stepRow" type="int">Row step size.</param>
+            <param name="firstCol" type="int">First column number in the slice.</param>
+            <param name="lastColInclusive" type="int">Maximum column number (inclusive) in the slice.</param>
+            <param name="stepCol" type="int">Column step size.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(ShoNS.Array.IArray`1{`0},System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Sets the slice to the contents of the input array</summary>
+            <param name="arrayToCopy">Input array</param>
+            <param name="firstRow" type="int">First row number in the slice.</param>
+            <param name="lastRowInclusive" type="int">Maximum row number (inclusive) in the slice.</param>
+            <param name="stepRow" type="int">Row step size.</param>
+            <param name="firstCol" type="int">First column number in the slice.</param>
+            <param name="lastColInclusive" type="int">Maximum column number (inclusive) in the slice.</param>
+            <param name="stepCol" type="int">Column step size.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(`0,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Sets all elements of the slice to the scalar, using the default step size of 1</summary>
+            <param name="value">Input value</param>
+            <param name="firstRow" type="int">First row number in the slice.</param>
+            <param name="lastRowInclusive" type="int">Maximum row number (inclusive) in the slice.</param>
+            <param name="firstCol" type="int">First column number in the slice.</param>
+            <param name="lastColInclusive" type="int">Maximum column number (inclusive) in the slice.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(ShoNS.Array.IArray`1{`0},System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Sets the slice to the contents of the input array, using the default step size of 1</summary>
+            <param name="arrayToCopy">Input array</param>
+            <param name="firstRow" type="int">First row number in the slice.</param>
+            <param name="lastRowInclusive" type="int">Maximum row number (inclusive) in the slice.</param>
+            <param name="firstCol" type="int">First column number in the slice.</param>
+            <param name="lastColInclusive" type="int">Maximum column number (inclusive) in the slice.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSlice(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Returns a slice of the array as a shallow copy</summary>
+            <param name="firstRow" type="int">First row number in the slice.</param>
+            <param name="lastRowInclusive" type="int">Maximum row number (inclusive) in the slice.</param>
+            <param name="stepRow" type="int">Row step size.</param>
+            <param name="firstCol" type="int">First column number in the slice.</param>
+            <param name="lastColInclusive" type="int">Maximum column number (inclusive) in the slice.</param>
+            <param name="stepCol" type="int">Column step size.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSliceDeep(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Returns a slice of the array as a deep copy</summary>
+            <param name="firstRow" type="int">First row number in the slice.</param>
+            <param name="lastRowInclusive" type="int">Maximum row number (inclusive) in the slice.</param>
+            <param name="stepRow" type="int">Row step size.</param>
+            <param name="firstCol" type="int">First column number in the slice.</param>
+            <param name="lastColInclusive" type="int">Maximum column number (inclusive) in the slice.</param>
+            <param name="stepCol" type="int">Column step size.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSlice(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Returns a slice of the array as a shallow copy, using the default step size of 1</summary>
+            <param name="firstRow" type="int">First row number in the slice.</param>
+            <param name="lastRowInclusive" type="int">Maximum row number (inclusive) in the slice.</param>
+            <param name="firstCol" type="int">First column number in the slice.</param>
+            <param name="lastColInclusive" type="int">Maximum column number (inclusive) in the slice.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSliceDeep(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Returns a slice of the array as a deep copy, using the default step size of 1</summary>
+            <param name="firstRow" type="int">First row number in the slice.</param>
+            <param name="lastRowInclusive" type="int">Maximum row number (inclusive) in the slice.</param>
+            <param name="firstCol" type="int">First column number in the slice.</param>
+            <param name="lastColInclusive" type="int">Maximum column number (inclusive) in the slice.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(ShoNS.Array.IArray`1{`0},System.Int32,System.Int32,System.Int32)">
+            <summary>Sets the slice of the array to the contents of the input array.</summary>
+            <param name="arrayToCopy">Input array</param>
+            <param name="firstIndex" type="int">First index in the slice.</param>
+            <param name="lastIndexInclusive" type="int">Maximum index (inclusive) in the slice.</param>
+            <param name="step">Step</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(`0,System.Int32,System.Int32,System.Int32)">
+            <summary>Sets the slice of the array to the scalar.</summary>
+            <param name="value">Input value</param>
+            <param name="firstIndex" type="int">First index in the slice.</param>
+            <param name="lastIndexInclusive" type="int">Maximum index (inclusive) in the slice.</param>
+            <param name="step">Step</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(ShoNS.Array.IArray`1{`0},System.Int32,System.Int32)">
+            <summary>Sets the slice of the array to the contents of the input array.</summary>
+            <param name="arrayToCopy">Input array</param>
+            <param name="firstIndex" type="int">First index in the slice.</param>
+            <param name="lastIndexInclusive" type="int">Maximum index (inclusive) in the slice.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.SetSlice(`0,System.Int32,System.Int32)">
+            <summary>Sets the slice of the array to the scalar.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSliceDeep(System.Int32,System.Int32,System.Int32)">
+            <summary>Returns a slice of the array as a deep copy</summary>
+            <param name="firstIndex" type="int">First index in the slice.</param>
+            <param name="lastIndexInclusive" type="int">Maximum index (inclusive) in the slice.</param>
+            <param name="step">Step</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSlice(System.Int32,System.Int32,System.Int32)">
+            <summary>Returns a slice of the array as a shallow copy</summary>
+            <param name="firstIndex" type="int">First index in the slice.</param>
+            <param name="lastIndexInclusive" type="int">Maximum index (inclusive) in the slice.</param>
+            <param name="step">Step</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSliceDeep(System.Int32,System.Int32)">
+            <summary>Returns a slice of the array as a deep copy</summary>
+            <param name="firstIndex" type="int">First index in the slice.</param>
+            <param name="lastIndexInclusive" type="int">Maximum index (inclusive) in the slice.</param>
+        </member>
+        <member name="M:ShoNS.Array.IArray`1.GetSlice(System.Int32,System.Int32)">
+            <summary>Returns a slice of the array as a shallow copy</summary>
+            <param name="firstIndex" type="int">First index in the slice.</param>
+            <param name="lastIndexInclusive" type="int">Maximum index (inclusive) in the slice.</param>
+        </member>
+        <member name="P:ShoNS.Array.IArray`1.default(ShoNS.Array.IArrayEntry)">
+            <summary>Gets and sets the value of the array at the given array entry.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArray`1.default(System.Int32)">
+            <summary>Gets and sets the value of the array at the given index, for 1D arrays.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArray`1.default(System.Int32,System.Int32)">
+            <summary>Gets and sets the value of the array at the given row and column indices.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArray`1.default(System.Collections.Generic.IList`1{System.Int32})">
+            <summary>Gets and sets the value of the array at the given indices, primarily for multidimensional arrays.</summary>
+        </member>
+        <member name="T:ShoNS.Array.IArray`1">
+            <summary>This interface provides functionality common to all arrays, e.g. slicing (sub-arrays), size, transposing.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="P:ShoNS.Array.IArrayBase.NumDim">
+            <summary>Returns the number of dimensions in the array.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArrayBase.GetLength(System.Int32)">
+            <summary>Returns the size of the given dimension.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayBase.Size">
+            <summary>Returns the sizes of the array dimensions in an array.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayBase.size1">
+            <summary>Returns the size of the second dimension.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayBase.size0">
+            <summary>Returns the size of the first dimension.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayBase.Length">
+            <summary>Returns the size of a vector (throws exception if not a vector)</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArrayBase.SameSize(ShoNS.Array.IArrayBase)">
+            <summary>Returns true if the arrays are of the same size.</summary>
+        </member>
+        <member name="T:ShoNS.Array.IArrayBase">
+            <summary>This interface provides array functionality that does not depend on type.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="P:ShoNS.Array.ISlice.Indices">
+            <summary>Returns the list of indices</summary>
+        </member>
+        <member name="P:ShoNS.Array.ISlice.IsNewAxis">
+            <summary>Returns true if this slice object represents a new axis</summary>
+        </member>
+        <member name="M:ShoNS.Array.ISlice.Step">
+            <summary>Returns the step value</summary>
+        </member>
+        <member name="M:ShoNS.Array.ISlice.Stop(System.Int32)">
+            <summary>Returns the stop index</summary>
+            <param name="arrayLen">Length of array dimension</param>
+        </member>
+        <member name="M:ShoNS.Array.ISlice.Start(System.Int32)">
+            <summary>Returns the start index</summary>
+            <param name="arrayLen">Length of array dimension</param>
+        </member>
+        <member name="T:ShoNS.Array.ISlice">
+            <summary>This interface defines slicing.</summary>
+        </member>
+        <member name="T:ShoNS.Array.OrderOp">
+            <summary>This enumeration describes how an operation is performed - row major or column major</summary>
+        </member>
+        <member name="F:ShoNS.Array.OrderOp.ColMajor">
+            <summary>Perform the operation in column major order</summary>
+        </member>
+        <member name="F:ShoNS.Array.OrderOp.RowMajor">
+            <summary>Perform the operation in row major order</summary>
+        </member>
+        <member name="F:ShoNS.Array.OrderOp.None">
+            <summary>The operation is not defined.</summary>
+        </member>
+        <member name="T:ShoNS.Array.DimOp">
+            <summary>This enumeration describes how an operation is performed in regard to a dimension.</summary>
+        </member>
+        <member name="F:ShoNS.Array.DimOp.EachCol">
+            <summary>The operation is performed for each column  - results in a vector of length = number of rows.</summary>
+        </member>
+        <member name="F:ShoNS.Array.DimOp.EachRow">
+            <summary>The operation is performed for each row - results in a vector of length = number of rows.</summary>
+        </member>
+        <member name="F:ShoNS.Array.DimOp.OverCol">
+            <summary>The operation is performed over the columns: op_j(Arr(i,j)) - results in a vector of length = number of rows.</summary>
+        </member>
+        <member name="F:ShoNS.Array.DimOp.OverRow">
+            <summary>The operation is performed over the rows: op_i(Arr(i,j)) - results in a vector of length = number of columns.</summary>
+        </member>
+        <member name="F:ShoNS.Array.DimOp.None">
+            <summary>The operation is not defined.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.ToString">
+            <summary>Returns a string representation of the array entry.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.#ctor(System.Collections.IList,`0)">
+            <summary>Creates an ArrayEntry object.</summary>
+            <param name="indexList">List of indices</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.#ctor(System.Collections.Generic.IList`1{System.Int32},`0)">
+            <summary>Creates an ArrayEntry object.</summary>
+            <param name="indexList">List of indices</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.#ctor(System.Int32,System.Int32,`0)">
+            <summary>Creates an ArrayEntry object with the given row and column index, meant for 2d arrays.</summary>
+            <param name="rowIndex">The row index</param>
+            <param name="colIndex">The column index</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="P:ShoNS.Array.ArrayEntry`1.Value">
+            <summary>Gets or sets the element value.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.SetIndex(System.Int32,System.Int32)">
+            <summary>Sets the index at the given dimension.</summary>
+            <param name="dim">Dimension for which to set the index</param>
+            <param name="index">The index</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.GetIndex(System.Int32)">
+            <summary>Gets the index at the given dimension.</summary>
+            <param name="dim">Dimension for which to get the index</param>
+        </member>
+        <member name="P:ShoNS.Array.ArrayEntry`1.IndexList">
+            <summary>Gets the index list.</summary>
+        </member>
+        <member name="P:ShoNS.Array.ArrayEntry`1.Col">
+            <summary>Gets or sets the column index (dimension 1).</summary>
+        </member>
+        <member name="P:ShoNS.Array.ArrayEntry`1.Row">
+            <summary>Gets or sets the row index (dimension 0).</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.op_Inequality(ShoNS.Array.ArrayEntry`1{`0},ShoNS.Array.ArrayEntry`1{`0})">
+            <summary>Determines if the two objects are not the same.</summary>
+            <param name="entry1">The first ArrayEntry object to compare</param>
+            <param name="entry2">The second ArrayEntry object to compare</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.op_Equality(ShoNS.Array.ArrayEntry`1{`0},ShoNS.Array.ArrayEntry`1{`0})">
+            <summary>Determines if the two objects are the same.</summary>
+            <param name="entry1">The first ArrayEntry object to compare</param>
+            <param name="entry2">The second ArrayEntry object to compare</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.GetHashCode">
+            <summary>Serves as a hash function.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.Equals(System.Object)">
+            <summary>Determines if the two objects are the same.</summary>
+            <param name="obj">The object to compare</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntry`1.Equals(ShoNS.Array.ArrayEntry`1{`0})">
+            <summary>Determines if the two ArrayEntry objects are the same.</summary>
+            <param name="arrayEntryOther">The object to compare</param>
+        </member>
+        <member name="T:ShoNS.Array.ArrayEntry`1">
+            <summary>This class encapsulates an array element: indices and value.</summary>
+            <typeparam name="TYPE">Array element type</typeparam>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.ToString">
+            <summary>Returns a string representation of the array entry.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.#ctor(ShoNS.Array.IArrayEntry)">
+            <summary>Creates an ArrayEntryIndex object.</summary>
+            <param name="arrayentry">IArrayEntry object to copy</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.#ctor(System.Collections.IList)">
+            <summary>Creates an ArrayEntryIndex object.</summary>
+            <param name="indexList">List of indices</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.#ctor(System.Collections.Generic.IList`1{System.Int32})">
+            <summary>Creates an ArrayEntryIndex object.</summary>
+            <param name="indexList">List of indices</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.#ctor(System.Int32,System.Int32)">
+            <summary>Creates an ArrayEntryIndex object with the given row and column index, meant for 2d arrays.</summary>
+            <param name="rowIndex">The row index</param>
+            <param name="rowIndex">The column index</param>
+        </member>
+        <member name="P:ShoNS.Array.ArrayEntryIndex.IndexList">
+            <summary>Gets the index list.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.SetIndex(System.Int32,System.Int32)">
+            <summary>Sets the index at the given dimension.</summary>
+            <param name="dim">Dimension for which to set the index</param>
+            <param name="index">The index</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.GetIndex(System.Int32)">
+            <summary>Gets the index at the given dimension.</summary>
+            <param name="dim">Dimension for which to get the index</param>
+        </member>
+        <member name="P:ShoNS.Array.ArrayEntryIndex.Col">
+            <summary>Gets or sets the column index (dimension 1).</summary>
+        </member>
+        <member name="P:ShoNS.Array.ArrayEntryIndex.Row">
+            <summary>Gets or sets the row index (dimension 0).</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.op_Inequality(ShoNS.Array.ArrayEntryIndex,ShoNS.Array.ArrayEntryIndex)">
+            <summary>Determines if the two objects not are the same.</summary>
+            <param name="entry1">The first ArrayEntryIndex object to compare</param>
+            <param name="entry2">The second ArrayEntryIndex object to compare</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.op_Equality(ShoNS.Array.ArrayEntryIndex,ShoNS.Array.ArrayEntryIndex)">
+            <summary>Determines if the two objects are the same.</summary>
+            <param name="entry1">The first ArrayEntryIndex object to compare</param>
+            <param name="entry2">The second ArrayEntryIndex object to compare</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.GetHashCode">
+            <summary>Serves as a hash function.</summary>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.Equals(System.Object)">
+            <summary>Determines if the two objects are the same.</summary>
+            <param name="obj">The object to compare</param>
+        </member>
+        <member name="M:ShoNS.Array.ArrayEntryIndex.Equals(ShoNS.Array.ArrayEntryIndex)">
+            <summary>Determines if the two ArrayEntryIndex objects are the same.</summary>
+            <param name="arrayEntryIndexOther">The object to compare</param>
+        </member>
+        <member name="T:ShoNS.Array.ArrayEntryIndex">
+            <summary>This class encapsulates the index of an array entry.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArrayEntry.SetIndex(System.Int32,System.Int32)">
+            <summary>Sets the index at the given dimension.</summary>
+        </member>
+        <member name="M:ShoNS.Array.IArrayEntry.GetIndex(System.Int32)">
+            <summary>Gets the index at the given dimension.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayEntry.IndexList">
+            <summary>Gets the index list</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayEntry.Col">
+            <summary>Gets or sets the column index.</summary>
+        </member>
+        <member name="P:ShoNS.Array.IArrayEntry.Row">
+            <summary>Gets or sets the row index.</summary>
+        </member>
+        <member name="T:ShoNS.Array.IArrayEntry">
+            <summary>This interface encapsulates the indices of an array element.</summary>
+        </member>
+        <member name="T:ShoNS.Array.SortOrder">
+            <summary>Enumeration for specifying the sort order for triplet lists used in importing/exporting sparse matrix index lists.</summary>
+        </member>
+        <member name="F:ShoNS.Array.SortOrder.RowMajor">
+            <summary>Row major</summary>
+        </member>
+        <member name="F:ShoNS.Array.SortOrder.ColumnMajor">
+            <summary>Column major</summary>
+        </member>
+        <member name="F:ShoNS.Array.SortOrder.Unsorted">
+            <summary>Not sorted</summary>
+        </member>
+        <member name="T:ShoNS.Array.SparseStorageFormat">
+            <summary>Enumeration for specifying the sparse storage format.</summary>
+        </member>
+        <member name="F:ShoNS.Array.SparseStorageFormat.COO">
+            <summary>Used internally</summary>
+        </member>
+        <member name="F:ShoNS.Array.SparseStorageFormat.CSC">
+            <summary>Compressed sparse column format</summary>
+        </member>
+        <member name="F:ShoNS.Array.SparseStorageFormat.CSR">
+            <summary>Compressed sparse row format</summary>
+        </member>
+        <member name="T:ShoNS.Array.SparseFileFormat">
+            <summary>Enumeration for specifying the sparse file format.</summary>
+        </member>
+        <member name="F:ShoNS.Array.SparseFileFormat.HB">
+            <summary>Harwell Boeing format</summary>
+        </member>
+        <member name="F:ShoNS.Array.SparseFileFormat.MTL">
+            <summary />
+        </member>
+        <member name="F:ShoNS.Array.SparseFileFormat.COOH">
+            <summary>Coordinate format</summary>
+        </member>
+        <member name="F:ShoNS.Array.SparseFileFormat.MM">
+            <summary>Matrix Market format</summary>
+        </member>
+    </members>
+</doc>

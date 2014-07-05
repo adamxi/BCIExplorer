@@ -1,0 +1,2171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MathFunc</name>
+    </assembly>
+    <members>
+        <member name="T:ShoNS.MathFunc.ArrayMath">
+            <summary>A static class that handles expanding functions in System.Math to
+            apply to rectangular data</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sqrt(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise square root of a DoubleArray</summary>
+            <param name="inputArray">DoubleArray of input</param>
+            <returns>DoubleArray of output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sqrt(ShoNS.Array.FloatArray)">
+            <summary>Elementwise square root of a FloatArray</summary>
+            <param name="inputArray">FloatArray of input</param>
+            <returns>FloatArray of output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sqrt(ShoNS.Array.IntArray)">
+            <summary>Elementwise square root of a IntArray</summary>
+            <param name="inputArray">IntArray of input</param>
+            <returns>DoubleArray of output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sqrt(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise square root of a iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">IEnumerable input</param>
+            <returns>DoubleArray of outputs.</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(ShoNS.Array.DoubleArray,System.Double)">
+            <summary>Raise each element of an input array to the same exponent</summary>
+            <param name="inputArray">DoubleArray of bases</param>
+            <param name="pow">Double of exponent</param>
+            <returns>DoubleArray of results, same shape as inputArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(ShoNS.Array.FloatArray,System.Single)">
+            <summary>Raise each element of an input array to the same exponent</summary>
+            <param name="inputArray">FloatArray of bases</param>
+            <param name="pow">Float of exponent</param>
+            <returns>FloatArray of results, same shape as inputArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(ShoNS.Array.IntArray,System.Double)">
+            <summary>Raise each element of an input array to the same exponent</summary>
+            <param name="inputArray">IntArray of bases</param>
+            <param name="pow">Double of exponent</param>
+            <returns>DoubleArray of results, same shape as inputArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(System.Collections.IEnumerable,System.Double)">
+            <summary>
+            Elementwise exponentiation of a iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input">IEnumerable of bases, each of which should be convertible to double</param>
+            <param name="pow">double-precision exponent</param>
+            <returns>DoubleArray with same rectangular shape as input</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(System.Double,ShoNS.Array.DoubleArray)">
+            <summary>Raise a double-precision base to a double-precision array of exponents.</summary>
+            <param name="x">double-precision base</param>
+            <param name="powerArray">DoubleArray of exponents</param>
+            <returns>DoubleArray of results, same shape as powerArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(System.Single,ShoNS.Array.FloatArray)">
+            <summary>Raise a single-precision base to a single-precision array of exponents.</summary>
+            <param name="x">single-precision base</param>
+            <param name="powerArray">FloatArray of exponents</param>
+            <returns>FloatArray of results, same shape as powerArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(System.Double,ShoNS.Array.IntArray)">
+            <summary>Raise a double-precision base to an integer array of exponents.</summary>
+            <param name="x">single-precision base</param>
+            <param name="powerArray">IntArray of exponents</param>
+            <returns>DoubleArray of results, same shape as powerArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(System.Double,System.Collections.IEnumerable)">
+            <summary>
+            Raise a double-precision base to an iterable of exponents.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="x">double-precision base</param>
+            <param name="pow">Iterable of exponents, each of which should be convertible to double</param>
+            <returns>DoubleArray of outputs</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray)">
+            <summary>Elementwise exponentiate an array of bases with an array of exponents. The arrays must have the same shape.</summary>
+            <param name="inputArray">DoubleArray of bases</param>
+            <param name="powerArray">DoubleArray of exponents</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray)">
+            <summary>Elementwise exponentiate an array of bases with an array of exponents. The arrays must have the same shape.</summary>
+            <param name="inputArray">FloatArray of bases</param>
+            <param name="powerArray">FloatArray of exponents</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(ShoNS.Array.IntArray,ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise exponentiate an array of bases with an array of exponents.
+            The arrays must have the same shape.
+            </summary>
+            <param name="inputArray">IntArray of bases</param>
+            <param name="powerArray">DoubleArray of exponents</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(ShoNS.Array.DoubleArray,ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise exponentiate an array of bases with an array of exponents.
+            The arrays must have the same shape.
+            </summary>
+            <param name="inputArray">DoubleArray of bases</param>
+            <param name="powerArray">IntArray of exponents</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(ShoNS.Array.IntArray,ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise exponentiate an array of bases with an array of exponents.
+            The arrays must have the same shape.
+            </summary>
+            <param name="inputArray">IntArray of bases</param>
+            <param name="powerArray">IntArray of exponents</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Pow(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Elementwise exponentiate an iterable of bases with an iterable of exponents.
+            Each iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as both of the input iterable.
+            </summary>
+            <param name="input">Iterable of bases (all convertible to double)</param>
+            <param name="powerArray">Iterable of exponents (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Exp(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise exponential of a DoubleArray</summary>
+            <param name="inputArray">input DoubleArray</param>
+            <returns>output DoubleArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Exp(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise exponential of a FloatArray
+            </summary>
+            <param name="inputArray">input FloatArray</param>
+            <returns>output FloatArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Exp(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise exponential of a IntArray
+            </summary>
+            <param name="inputArray">input IntArray</param>
+            <returns>output DoubleArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Exp(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise exponential of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise natural logarithm of a DoubleArray
+            </summary>
+            <param name="inputArray">input DoubleArray</param>
+            <returns>output DoubleArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise natural logarithm of a FloatArray
+            </summary>
+            <param name="inputArray">input FloatArray</param>
+            <returns>output FloatArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise natural logarithm of a IntArray
+            </summary>
+            <param name="inputArray">input IntArray</param>
+            <returns>output DoubleArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise natural logarithm of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log10(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise logarithm (base 10) of a DoubleArray
+            </summary>
+            <param name="inputArray">input DoubleArray</param>
+            <returns>output DoubleArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log10(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise logarithm (base 10) of a FloatArray
+            </summary>
+            <param name="inputArray">input FloatArray</param>
+            <returns>output FloatArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log10(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise logarithm (base 10) of an IntArray
+            </summary>
+            <param name="inputArray">input IntArray</param>
+            <returns>output IntArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log10(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise logarithm (base 10) of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.DoubleArray,System.Double)">
+            <summary>
+            Elementwise logarithm (with specified base) of a DoubleArray
+            </summary>
+            <param name="inputArray">input DoubleArray</param>
+            <param name="basep">double-precision base</param>
+            <returns>output DoubleArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.FloatArray,System.Single)">
+            <summary>
+            Elementwise logarithm (with specified base) of a FloatArray
+            </summary>
+            <param name="inputArray">input FloatArray</param>
+            <param name="basep">single-precision specified base</param>
+            <returns>output FloatArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.IntArray,System.Double)">
+            <summary>
+            Elementwise logarithm (with specified base) of a IntArray
+            </summary>
+            <param name="inputArray">input IntArray</param>
+            <param name="basep">double-precision specified base</param>
+            <returns>output DoubleArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(System.Collections.IEnumerable,System.Double)">
+            <summary>
+            Elementwise logarithm (with specified base) of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input">Input iterable (elements convertible into doubles)</param>
+            <param name="basep">double-precision base</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(System.Double,ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise logarithm of a value with an DoubleArray of bases
+            </summary>
+            <param name="x">Value to take logarithm of</param>
+            <param name="baseArray">DoubleArray of bases</param>
+            <returns>DoubleArray of outputs</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(System.Single,ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise logarithm of a value with an FloatArray of bases
+            </summary>
+            <param name="x">Value to take logarithm of</param>
+            <param name="baseArray">FloatArray of bases</param>
+            <returns>FloatArray of outputs</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(System.Double,System.Collections.IEnumerable)">
+            <summary>
+            Elementwise logarithm of value 
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="x">Double-precision value</param>
+            <param name="baseArray">Iterable of bases (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise logarithm of DoubleArray of values with a DoubleArray of bases
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <param name="baseArray">DoubleArray of bases</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise logarithm of FloatArray of values with a FloatArray of bases
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <param name="baseArray">FloatArray of bases</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.IntArray,ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise logarithm of IntArray of values with a DoubleArray of bases
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <param name="baseArray">DoubleArray of bases</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(ShoNS.Array.IntArray,ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise logarithm of IntArray of values with a IntArray of bases
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <param name="baseArray">IntArray of bases</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Log(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Elementwise logarithm an iterable of values with an iterable of bases.
+            Each iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as both of the input iterable.
+            </summary>
+            <param name="input">Iterable of values(all convertible to double)</param>
+            <param name="baseArray">Iterable of bases (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Cos(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise cosine of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Cos(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise cosine of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Cos(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise cosine of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Cos(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise cosine of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sin(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise sine of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sin(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise sine of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sin(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise sine of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sin(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise sine of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Tan(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise tangent of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Tan(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise tangent of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Tan(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise tangent of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Tan(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise tangent of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Acos(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise inverse cosine of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Acos(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise inverse cosine of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Acos(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise inverse cosine of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Acos(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise inverse cosine of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Asin(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise inverse sine of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Asin(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise inverse sine of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Asin(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise inverse sine of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Asin(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise inverse sine of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise inverse tangent of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise inverse tangent of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise inverse tangent of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise inverse tangent of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(ShoNS.Array.DoubleArray,System.Double)">
+            <summary>
+            Elementwise two-parameter inverse tangent:
+               given multiple x and single y coordinates, find angle from x-axis for all
+            </summary>
+            <param name="inputArray1">DoubleArray of x coordinates</param>
+            <param name="input2">double-precision y coordinate</param>
+            <returns>DoubleArray of angles, same shape as x array</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(ShoNS.Array.FloatArray,System.Single)">
+            <summary>
+            Elementwise two-parameter inverse tangent:
+               given multiple x and single y coordinates, find angle from x-axis for all
+            </summary>
+            <param name="inputArray1">FloatArray of x coordinates</param>
+            <param name="input2">single-precision y coordinate</param>
+            <returns>FloatArray of angles, same shape as x array</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(ShoNS.Array.IntArray,System.Int32)">
+            <summary>
+            Elementwise two-parameter inverse tangent:
+               given multiple x and single y coordinates, find angle from x-axis for all
+            </summary>
+            <param name="inputArray1">IntArray of x coordinates</param>
+            <param name="input2">integer y coordinate</param>
+            <returns>DoubleArray of angles, same shape as x array</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(System.Collections.IEnumerable,System.Double)">
+            <summary>
+            Elementwise two-parameter inverse tangent of an iterable object and a value
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input1">Iterable of x coordinates (should be convertible to a double)</param>
+            <param name="input2">Double-precision y coordinates</param>
+            <returns>DoubleArray of angles, same shape as iterable</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(System.Double,ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise two-parameter inverse tangent:
+               given a single x and multiple y coordinates, find angle from x-axis for all
+            </summary>
+            <param name="input1">double-precision x coordinate</param>
+            <param name="inputArray2">DoubleArray of y coordinates</param>
+            <returns>DoubleArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(System.Single,ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise two-parameter inverse tangent:
+               given a single x and multiple y coordinates, find angle from x-axis for all
+            </summary>
+            <param name="input1">single-precision x coordinate</param>
+            <param name="inputArray2">FloatArray of y coordinates</param>
+            <returns>FloatArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(System.Int32,ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise two-parameter inverse tangent:
+               given a single x and multiple y coordinates, find angle from x-axis for all
+            </summary>
+            <param name="input1">integer x coordinate</param>
+            <param name="inputArray2">IntArray of y coordinates</param>
+            <returns>DoubleArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(System.Double,System.Collections.IEnumerable)">
+            <summary>
+            Elementwise two-parameter inverse tangent of a value and an iterable object
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input1">Double-precision x coordinate</param>
+            <param name="input2">Iterable of y coordinates (should be convertible to a double)</param>
+            <returns>DoubleArray of angles, same shape as iterable</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise two-parameter inverse tangent of an x-coordinate array and a y-coordinate array
+            </summary>
+            <param name="inputArray1">DoubleArray of x coordinates</param>
+            <param name="inputArray2">DoubleArray of y coordinates</param>
+            <returns>DoubleArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise two-parameter inverse tangent of an x-coordinate array and a y-coordinate array
+            </summary>
+            <param name="inputArray1">FloatArray of x coordinates</param>
+            <param name="inputArray2">FloatArray of y coordinates</param>
+            <returns>FloatArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(ShoNS.Array.IntArray,ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise two-parameter inverse tangent of an x-coordinate array and a y-coordinate array
+            </summary>
+            <param name="inputArray1">IntArray of x coordinates</param>
+            <param name="inputArray2">IntArray of y coordinates</param>
+            <returns>DoubleArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Atan2(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Elementwise two-parameter inverse tangent an iterable of x coordinates and an iterable of y-coordinates
+            Each iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as both of the input iterable.
+            </summary>
+            <param name="input1">Iterable of x coordinates (all convertible to double)</param>
+            <param name="input2">Iterable of y coordinates (all convertible to double)</param>
+            <returns>DoubleArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Cosh(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise hyperbolic cosine of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Cosh(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise hyperbolic cosine of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Cosh(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise hyperbolic cosine of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Cosh(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise hyperbolic cosine of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sinh(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise hyperbolic sine of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sinh(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise hyperbolic sine of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sinh(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise hyperbolic sine of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sinh(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise hyperbolic sine of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Tanh(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise hyperbolic tangent of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Tanh(ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise hyperbolic tangent of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Tanh(ShoNS.Array.IntArray)">
+            <summary>
+            Elementwise hyperbolic tangent of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Tanh(System.Collections.IEnumerable)">
+            <summary>
+            Elementwise hyperbolic tangent of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="enumer">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Floor(ShoNS.Array.DoubleArray)">
+            <summary>
+            Find the highest integer less than or equal to each element of an array.
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of highest integers</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Floor(ShoNS.Array.FloatArray)">
+            <summary>
+            Find the highest integer less than or equal to each element of an array.
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of highest integers</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Floor(System.Collections.IEnumerable)">
+            <summary>
+            Find the highest integer less than or equal to each element of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of highest integers</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Ceil(ShoNS.Array.DoubleArray)">
+            <summary>
+            Find the lowest integer greater than or equal to each element of an array.
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of lowest integers</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Ceil(ShoNS.Array.FloatArray)">
+            <summary>
+            Find the lowest integer greater than or equal to each element of an array.
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of lowest integers</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Ceil(System.Collections.IEnumerable)">
+            <summary>
+            Find the lowest integer greater than or equal to each element of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of lowest integers</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Trunc(ShoNS.Array.DoubleArray)">
+            <summary>
+            Return the integer part of each element of a DoubleArray
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Trunc(ShoNS.Array.FloatArray)">
+            <summary>
+            Return the integer part of each element of a DoubleArray
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Trunc(System.Collections.IEnumerable)">
+            <summary>
+            Return the integer part of each element of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Round(ShoNS.Array.DoubleArray)">
+            <summary>
+            Return the nearest integer value to each element of an array
+            </summary>
+            <param name="inputArray">DoubleArray of input values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Round(ShoNS.Array.FloatArray)">
+            <summary>
+            Return the nearest integer value to each element of an array
+            </summary>
+            <param name="inputArray">FloatArray of input values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Round(System.Collections.IEnumerable)">
+            <summary>
+            Return the nearest integer value to each element of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sign(ShoNS.Array.DoubleArray)">
+            <summary>
+            Compute the sign of each value in an input array
+            Return +1 for positive values, -1 for negative values, 0 for 0.
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sign(ShoNS.Array.FloatArray)">
+            <summary>
+            Compute the sign of each value in an input array
+            Return +1 for positive values, -1 for negative values, 0 for 0.
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sign(ShoNS.Array.IntArray)">
+            <summary>
+            Compute the sign of each value in an input array
+            Return +1 for positive values, -1 for negative values, 0 for 0.
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>IntArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Sign(System.Collections.IEnumerable)">
+            <summary>
+            Return the sign of each element of an iterable object.
+            Return +1 for positive values, -1 for negative values, 0 for 0.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Abs(ShoNS.Array.DoubleArray)">
+            <summary>
+            Return the absolute value of each element of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Abs(ShoNS.Array.FloatArray)">
+            <summary>
+            Return the absolute value of each element of an array
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <returns>FloatArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Abs(ShoNS.Array.IntArray)">
+            <summary>
+            Return the absolute value of each element of an array
+            </summary>
+            <param name="inputArray">IntArray of values</param>
+            <returns>IntArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Abs(System.Collections.IEnumerable)">
+            <summary>
+            Return the absolute value of each element of an iterable object.
+            The iterable object can contain other iterable objects,
+                as long as all of them have the same length.
+            The output will be a DoubleArray of the same shape as the input iterable.
+            </summary>
+            <param name="input">Iterable of input values (all convertible to double)</param>
+            <returns>DoubleArray of results</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Abs(ShoNS.Array.ComplexArray)">
+            <summary>
+            Return the absolute value (magnitude) of each complex value of an input array
+            </summary>
+            <param name="inputArray">ComplexArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Erf(ShoNS.Array.DoubleArray)">
+            <summary>Computes the error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Erf(ShoNS.Array.FloatArray)">
+            <summary>Computes the error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+            <returns>FloatArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Erfc(ShoNS.Array.DoubleArray)">
+            <summary>Computes the complementary error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Erfc(ShoNS.Array.FloatArray)">
+            <summary>Computes the complementary error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+            <returns>FloatArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ErfInv(ShoNS.Array.DoubleArray)">
+            <summary>Computes the inverse error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ErfInv(ShoNS.Array.FloatArray)">
+            <summary>Computes the inverse error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+            <returns>FloatArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ErfcInv(ShoNS.Array.DoubleArray)">
+            <summary>Computes the inverse complementary error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ErfcInv(ShoNS.Array.FloatArray)">
+            <summary>Computes the inverse complementary error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+            <returns>FloatArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.GammaMKL(ShoNS.Array.DoubleArray)">
+            <summary>Computes the gamma function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.GammaMKL(ShoNS.Array.FloatArray)">
+            <summary>Computes the gamma function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+            <returns>FloatArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.LogGammaMKL(ShoNS.Array.DoubleArray)">
+            <summary>Computes the log gamma function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.LogGammaMKL(ShoNS.Array.FloatArray)">
+            <summary>Computes the log gamma function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+            <returns>FloatArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.CdfNorm(ShoNS.Array.DoubleArray)">
+            <summary>Computes the cumulative normal distribution function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.CdfNorm(ShoNS.Array.FloatArray)">
+            <summary>Computes the cumulative normal distribution function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+            <returns>FloatArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.CdfNormInv(ShoNS.Array.DoubleArray)">
+            <summary>Computes the inverse cumulative normal distribution function for each element of an input array, uses MKL </summary>
+            <param name="inputArray">DoubleArray input</param>
+            <returns>DoubleArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.CdfNormInv(ShoNS.Array.FloatArray)">
+            <summary>Computes the inverse cumulative normal distribution function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+            <returns>FloatArray output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Distance(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray)">
+            <summary>Computes the distance between two vectors</summary>
+            <param name="vector1">First vector</param>
+            <param name="vector2">Second vector</param>        
+            <returns>Distance</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.Distance(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray)">
+            <summary>Computes the distance between two vectors</summary>
+            <param name="vector1">First vector</param>
+            <param name="vector2">Second vector</param>        
+            <returns>Distance</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.DoubleArray,System.Func{System.Double,System.Double})">
+            <summary>Applies the given function to each element of the array: f(array)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="f">Function to apply</param>
+            <returns>A DoubleArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray,System.Func{System.Double,System.Double,System.Double})">
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>A DoubleArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.DoubleArray,System.Double,System.Func{System.Double,System.Double,System.Double})">
+            <summary>Applies the given function to each element of the array: f(array, arg)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="arg">Argument</param>
+            <param name="f">Function to apply</param>
+            <returns>A DoubleArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.DoubleArray,ShoNS.Array.FloatArray,System.Func{System.Double,System.Single,System.Double})">
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>A DoubleArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.DoubleArray,ShoNS.Array.IntArray,System.Func{System.Double,System.Int32,System.Double})">
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>A DoubleArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.FloatArray,System.Func{System.Single,System.Single})">
+            <summary>Applies the given function to each element of the array: f(array)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="f">Function to apply</param>
+            <returns>A FloatArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray,System.Func{System.Single,System.Single,System.Single})">
+            <summary>Applies the given function to each element of the arrays: f(array1, array2)</summary>
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>A FloatArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.FloatArray,ShoNS.Array.IntArray,System.Func{System.Single,System.Int32,System.Single})">
+            <summary>Applies the given function to each element of the arrays: f(array1, array2)</summary>
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>A FloatArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.FloatArray,ShoNS.Array.DoubleArray,System.Func{System.Single,System.Double,System.Double})">
+            <summary>Applies the given function to each element of the arrays: f(array1, array2)</summary>
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>A DoubleArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.FloatArray,System.Single,System.Func{System.Single,System.Single,System.Single})">
+            <summary>Applies the given function to each element of the array: f(array, arg)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="arg">Argument</param>
+            <param name="f">Function to apply</param>
+            <returns>A FloatArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,System.Func{System.Int32,System.Int32})">
+            <summary>Applies the given function to each element of the array: f(array)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="f">Function to apply</param>
+            <returns>An IntArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,System.Func{System.Int32,System.Double})">
+            <summary>Applies the given function to each element of the array: f(array)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="f">Function to apply</param>
+            <returns>A DoubleArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,System.Func{System.Int32,System.Single})">
+            <summary>Applies the given function to each element of the array: f(array)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="f">Function to apply</param>
+            <returns>A FloatArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,ShoNS.Array.IntArray,System.Func{System.Int32,System.Int32,System.Int32})">
+            <summary>Applies the given function to each element of the arrays: f(array1, array2)</summary>
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>An IntArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,ShoNS.Array.FloatArray,System.Func{System.Int32,System.Single,System.Single})">
+            <summary>Applies the given function to each element of the arrays: f(array1, array2)</summary>
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>A FloatArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,ShoNS.Array.DoubleArray,System.Func{System.Int32,System.Double,System.Double})">
+            <summary>Applies the given function to each element of the arrays: f(array1, array2)</summary>
+            <summary>Applies the given function to each element of the arrays: f(array1,array2)</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+            <returns>A DoubleArray containing the result of applying the function</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,System.Int32,System.Func{System.Int32,System.Int32,System.Int32})">
+            <summary>Applies the given function to each element of the array: f(array, arg)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="arg">Argument</param>
+            <param name="f">Function to apply</param>
+            <returns>An IntArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,System.Single,System.Func{System.Int32,System.Single,System.Single})">
+            <summary>Applies the given function to each element of the array: f(array, arg)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="arg">Argument</param>
+            <param name="f">Function to apply</param>
+            <returns>A FloatArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMath.ApplyFunc(ShoNS.Array.IntArray,System.Double,System.Func{System.Int32,System.Double,System.Double})">
+            <summary>Applies the given function to each element of the array: f(array, arg)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="arg">Argument</param>
+            <param name="f">Function to apply</param>
+            <returns>A DoubleArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="T:ShoNS.MathFunc.ArrayMathInPlace">
+            <summary>A static class that handles expanding functions in System.Math to
+            apply to rectangular data (including ShoNS.Array.Array). These methods are done in-place on the input array.</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Sqrt(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise square root of a DoubleArray</summary>
+            <param name="inputArray">DoubleArray of input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Sqrt(ShoNS.Array.FloatArray)">
+            <summary>Elementwise square root of a FloatArray</summary>
+            <param name="inputArray">FloatArray of input</param>
+            <returns>FloatArray of output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Pow(ShoNS.Array.DoubleArray,System.Double)">
+            <summary>Raise each element of an input array to the same exponent</summary>
+            <param name="inputArray">DoubleArray of bases</param>
+            <param name="pow">Double of exponent</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Pow(ShoNS.Array.FloatArray,System.Single)">
+            <summary>Raise each element of an input array to the same exponent</summary>
+            <param name="inputArray">FloatArray of bases</param>
+            <param name="pow">Float of exponent</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Pow(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray)">
+            <summary>Elementwise exponentiate an array of bases with an array of exponents. The arrays must have the same shape.</summary>
+            <param name="inputArray">DoubleArray of bases</param>
+            <param name="powerArray">DoubleArray of exponents</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Pow(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray)">
+            <summary>Elementwise exponentiate an array of bases with an array of exponents. The arrays must have the same shape.</summary>
+            <param name="inputArray">FloatArray of bases</param>
+            <param name="powerArray">FloatArray of exponents</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Exp(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise exponential of a DoubleArray</summary>
+            <param name="inputArray">input DoubleArray</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Exp(ShoNS.Array.FloatArray)">
+            <summary>Elementwise exponential of a FloatArray</summary>
+            <param name="inputArray">input FloatArray</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Log(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise natural logarithm of a DoubleArray</summary>
+            <param name="inputArray">input DoubleArray</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Log(ShoNS.Array.FloatArray)">
+            <summary>Elementwise natural logarithm of a FloatArray</summary>
+            <param name="inputArray">input FloatArray</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Log10(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise logarithm (base 10) of a DoubleArray</summary>
+            <param name="inputArray">input DoubleArray</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Log10(ShoNS.Array.FloatArray)">
+            <summary>Elementwise logarithm (base 10) of a FloatArray</summary>
+            <param name="inputArray">input FloatArray</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Log(ShoNS.Array.DoubleArray,System.Double)">
+            <summary>Elementwise logarithm (with specified base) of a DoubleArray</summary>
+            <param name="inputArray">input DoubleArray</param>
+            <param name="basep">double-precision base</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Log(ShoNS.Array.FloatArray,System.Single)">
+            <summary>
+            Elementwise logarithm (with specified base) of a FloatArray
+            </summary>
+            <param name="inputArray">input FloatArray</param>
+            <param name="basep">single-precision specified base</param>
+            <returns>output FloatArray</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Log(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray)">
+            <summary>Elementwise logarithm of DoubleArray of values with a DoubleArray of bases</summary>
+            <param name="inputArray">DoubleArray of values</param>
+            <param name="baseArray">DoubleArray of bases</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Log(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray)">
+            <summary>
+            Elementwise logarithm of FloatArray of values with a FloatArray of bases
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+            <param name="baseArray">FloatArray of bases</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Cos(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise cosine of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Cos(ShoNS.Array.FloatArray)">
+            <summary>Elementwise cosine of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Sin(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise sine of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Sin(ShoNS.Array.FloatArray)">
+            <summary>Elementwise sine of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Tan(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise tangent of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Tan(ShoNS.Array.FloatArray)">
+            <summary>Elementwise tangent of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Acos(ShoNS.Array.DoubleArray)">
+            <summary>
+            Elementwise inverse cosine of an array
+            </summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Acos(ShoNS.Array.FloatArray)">
+            <summary>Elementwise inverse cosine of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Asin(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise inverse sine of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Asin(ShoNS.Array.FloatArray)">
+            <summary>Elementwise inverse sine of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Atan(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise inverse tangent of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Atan(ShoNS.Array.FloatArray)">
+            <summary>Elementwise inverse tangent of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Atan2(ShoNS.Array.DoubleArray,System.Double)">
+            <summary>
+            Elementwise two-parameter inverse tangent:
+               given multiple x and single y coordinates, find angle from x-axis for all
+            </summary>
+            <param name="inputArray1">DoubleArray of x coordinates</param>
+            <param name="input2">double-precision y coordinate</param>
+            <returns>DoubleArray of angles, same shape as x array</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Atan2(ShoNS.Array.FloatArray,System.Single)">
+            <summary>
+            Elementwise two-parameter inverse tangent:
+               given multiple x and single y coordinates, find angle from x-axis for all
+            </summary>
+            <param name="inputArray1">FloatArray of x coordinates</param>
+            <param name="input2">single-precision y coordinate</param>
+            <returns>FloatArray of angles, same shape as x array</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Atan2(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray)">
+            <summary>Elementwise two-parameter inverse tangent of an x-coordinate array and a y-coordinate array</summary>
+            <param name="inputArray1">DoubleArray of x coordinates</param>
+            <param name="inputArray2">DoubleArray of y coordinates</param>
+            <returns>DoubleArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Atan2(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray)">
+            <summary>Elementwise two-parameter inverse tangent of an x-coordinate array and a y-coordinate array</summary>
+            <param name="inputArray1">FloatArray of x coordinates</param>
+            <param name="inputArray2">FloatArray of y coordinates</param>
+            <returns>FloatArray of angles</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Cosh(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise hyperbolic cosine of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Cosh(ShoNS.Array.FloatArray)">
+            <summary>Elementwise hyperbolic cosine of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Sinh(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise hyperbolic sine of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Sinh(ShoNS.Array.FloatArray)">
+            <summary>Elementwise hyperbolic sine of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Tanh(ShoNS.Array.DoubleArray)">
+            <summary>Elementwise hyperbolic tangent of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Tanh(ShoNS.Array.FloatArray)">
+            <summary>Elementwise hyperbolic tangent of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Floor(ShoNS.Array.DoubleArray)">
+            <summary>Find the highest integer less than or equal to each element of an array.</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Floor(ShoNS.Array.FloatArray)">
+            <summary>
+            Find the highest integer less than or equal to each element of an array.
+            </summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Ceil(ShoNS.Array.DoubleArray)">
+            <summary>Find the lowest integer greater than or equal to each element of an array.</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Ceil(ShoNS.Array.FloatArray)">
+            <summary>Find the lowest integer greater than or equal to each element of an array.</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Trunc(ShoNS.Array.DoubleArray)">
+            <summary>Return the integer part of each element of a DoubleArray</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Trunc(ShoNS.Array.FloatArray)">
+            <summary>Return the integer part of each element of a DoubleArray</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Round(ShoNS.Array.DoubleArray)">
+            <summary>Return the nearest integer value to each element of an array</summary>
+            <param name="inputArray">DoubleArray of input values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Round(ShoNS.Array.FloatArray)">
+            <summary>Return the nearest integer value to each element of an array</summary>
+            <param name="inputArray">FloatArray of input values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Abs(ShoNS.Array.DoubleArray)">
+            <summary>Return the absolute value of each element of an array</summary>
+            <param name="inputArray">DoubleArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Abs(ShoNS.Array.FloatArray)">
+            <summary>Return the absolute value of each element of an array</summary>
+            <param name="inputArray">FloatArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Abs(ShoNS.Array.IntArray)">
+            <summary> Return the absolute value of each element of an array</summary>
+            <param name="inputArray">IntArray of values</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Erf(ShoNS.Array.DoubleArray)">
+            <summary>Computes the error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Erf(ShoNS.Array.FloatArray)">
+            <summary>Computes the error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Erfc(ShoNS.Array.DoubleArray)">
+            <summary>Computes the complementary error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.Erfc(ShoNS.Array.FloatArray)">
+            <summary>Computes the complementary error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ErfInv(ShoNS.Array.DoubleArray)">
+            <summary>Computes the inverse error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ErfInv(ShoNS.Array.FloatArray)">
+            <summary>Computes the inverse error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ErfcInv(ShoNS.Array.DoubleArray)">
+            <summary>Computes the inverse complementary error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ErfcInv(ShoNS.Array.FloatArray)">
+            <summary>Computes the inverse complementary error function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.GammaMKL(ShoNS.Array.DoubleArray)">
+            <summary>Computes the gamma function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.GammaMKL(ShoNS.Array.FloatArray)">
+            <summary>Computes the gamma function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.LogGammaMKL(ShoNS.Array.DoubleArray)">
+            <summary>Computes the log gamma function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.LogGammaMKL(ShoNS.Array.FloatArray)">
+            <summary>Computes the log gamma function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.CdfNorm(ShoNS.Array.DoubleArray)">
+            <summary>Computes the cumulative normal distribution function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.CdfNorm(ShoNS.Array.FloatArray)">
+            <summary>Computes the cumulative normal distribution function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.CdfNormInv(ShoNS.Array.DoubleArray)">
+            <summary>Computes the inverse cumulative normal distribution function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">DoubleArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.CdfNormInv(ShoNS.Array.FloatArray)">
+            <summary>Computes the inverse cumulative normal distribution function for each element of an input array, uses MKL</summary>
+            <param name="inputArray">FloatArray input</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ApplyFunc(ShoNS.Array.DoubleArray,System.Func{System.Double,System.Double})">
+            <summary>Applies the given function to each element of the array: f(array)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="f">Function to apply</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ApplyFunc(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray,System.Func{System.Double,System.Double,System.Double})">
+            <summary>Applies the given function to each element of the arrays: f(array1,array2), writing into array1</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ApplyFunc(ShoNS.Array.DoubleArray,System.Double,System.Func{System.Double,System.Double,System.Double})">
+            <summary>Applies the given function to each element of the array: f(array, arg)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="arg">Argument</param>
+            <param name="f">Function to apply</param>
+            <returns>A DoubleArray containing the result of applying the function elementwise</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ApplyFunc(ShoNS.Array.FloatArray,System.Func{System.Single,System.Single})">
+            <summary>Applies the given function to each element of the array: f(array)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="f">Function to apply</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ApplyFunc(ShoNS.Array.FloatArray,ShoNS.Array.FloatArray,System.Func{System.Single,System.Single,System.Single})">
+            <summary>Applies the given function to each element of the arrays: f(array1, array2), writing into array1.</summary>
+            <param name="inputArray1">Input array</param>
+            <param name="inputArray2">Input array, must be the same size as the first input array</param>
+            <param name="f">Function to apply pairwise to the elements of the input arrays</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayMathInPlace.ApplyFunc(ShoNS.Array.FloatArray,System.Single,System.Func{System.Single,System.Single,System.Single})">
+            <summary>Applies the given function to each element of the array: f(array, arg)</summary>
+            <param name="inputArray">Input array</param>
+            <param name="arg">Argument</param>
+            <param name="f">Function to apply</param>
+        </member>
+        <member name="T:ShoNS.MathFunc.ElementType">
+            <summary>
+            An enum that contains different collection types that can occur
+            </summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.mixed">
+            <summary>mixed: no single type that can describe the collection</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.unsupported">
+            <summary>unsupported: collection contains type that cannot map to known type</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.broken">
+            <summary>broken: collection is not enumerable</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.empty">
+            <summary>empty: collection has no elements</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.boolType">
+            <summary>boolType: collection contains only boolean types</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.intType">
+            <summary>intType: collection contains only integer types</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.bigintType">
+            <summary>bigintType: collection contains arbitrary precision integers</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.floatType">
+            <summary>floatType: collection contains floating-point values</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.doubleType">
+            <summary>doubleType: collection contains double-precision floating-point values</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.stringType">
+            <summary>stringType: collection contains strings</summary>
+        </member>
+        <member name="F:ShoNS.MathFunc.ElementType.datetimeType">
+            <summary>datetimeType: collection contains date/time information</summary>
+        </member>
+        <member name="T:ShoNS.MathFunc.ElementTester">
+            <summary>
+            A static class that returns an overall type of a collection. The collection itself
+            could be untyped (e.g., IEnumerable) with possible different element types within itself.
+            </summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.IsNumericType(ShoNS.MathFunc.ElementType)">
+            <summary>
+            Can the type perform addition and multiplication?
+            </summary>
+            <param name="eltype">ElementType for colletion</param>
+            <returns>bool result</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.IsFloatingPointType(ShoNS.MathFunc.ElementType)">
+            <summary>
+            Does the type represent a floating-point value?
+            </summary>
+            <param name="eltype">ElementType for colletion</param>
+            <returns>bool result</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.ConvertToDouble(System.Object)">
+            <summary>
+            Convert value to System.Double, even if DateTime (i.e., use OADate)
+            </summary>
+            <param name="obj">input object</param>
+            <returns>double precision output</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.PossibleDateTimeConvert(System.Object,ShoNS.MathFunc.ElementType)">
+            <summary>
+            Convert an input value to a DateTime, if ElementType is datetimeType
+            Otherwise leave alone.
+            Used for internal purposes, not designed for user use.
+            </summary>
+            <param name="obj">Input object</param>
+            <param name="et">ElementType</param>
+            <returns>New value (possibly a datetime)</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.Type(System.Object)">
+            <summary>
+            Deprecated method: use CollectionType instead
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.IsCompatibleType(ShoNS.MathFunc.ElementType,ShoNS.MathFunc.ElementType)">
+            <summary></summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.GetLargerType(ShoNS.MathFunc.ElementType,ShoNS.MathFunc.ElementType)">
+            <summary></summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.CollectionType(System.Object)">
+            <summary>
+            Given an object or collection, return its ElementType
+            </summary>
+            <param name="obj">object</param>
+            <returns>ElementType</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.ElementTester.ObjectType(System.Object)">
+            <summary>
+            Given a object, return its ElementType
+            </summary>
+            <param name="val">object</param>
+            <returns>ElementType</returns>
+        </member>
+        <member name="T:ShoNS.MathFunc.ArrayRandom">
+            <summary>Static class for filling arrays with random numbers or creating arrays filled with random values.</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandom``1(ShoNS.Array.NumArrayBase{``0})">
+            <summary>Fills the input array with random values using the RandomFactory.</summary>
+            <typeparam name="T">Element type</typeparam>
+            <param name="array">Input array to fill</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandom``1(ShoNS.Array.NumArrayBase{``0},System.Single)">
+            <summary>Fills the input array with random values using the RandomFactory.</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandomNorm(ShoNS.Array.NumArrayBase{System.Double})">
+            <summary>Fills the input array with normally-distributed random numbers.</summary>
+            <param name="array">Input array to fill</param>         
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandom(ShoNS.Array.NumArrayBase{System.Int32},System.Int32)">
+            <summary>Fills the input array with random values using the RandomFactory.</summary>
+            <param name="array">Input array to fill</param>
+            <param name="maxInt">Maximum integer</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandom``1(ShoNS.Array.NumArrayBase{``0},System.Random)">
+            <summary>Fills the input array with random values using the given Random object.</summary>
+            <typeparam name="T">Element type</typeparam>        
+            <param name="array">Input array to fill</param>
+            <param name="rn">Random number generator object</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandom(ShoNS.Array.NumArrayBase{System.Int32},System.Random,System.Int32)">
+            <summary>Fills the input array with random values using the given Random object.</summary>
+            <param name="array">Input array to fill</param>
+            <param name="rn">Random number generator object</param>
+            <param name="maxInt">Maximum integer</param>         
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandomSeed(ShoNS.Array.NumArrayBase{System.Int32},System.Int32,System.Int32)">
+            <summary>Sets random seed to seed, then fills the input array with random values using the RandomFactory.</summary>
+            <param name="array">Input array to fill</param>
+            <param name="seed">Seed</param>
+            <param name="maxInt">Maximum integer</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandomSeed``1(ShoNS.Array.NumArrayBase{``0},System.Int32)">
+            <summary>Sets random seed to seed, then fills the input array with random values using the RandomFactory.</summary>
+            <typeparam name="T">Element type</typeparam>        
+            <param name="array">Input array to fill</param>
+            <param name="seed">Seed</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandomNormSeed(ShoNS.Array.NumArrayBase{System.Double},System.Int32)">
+            <summary>Sets random seed to seed, then fills the input array with random values using GaussRand.</summary>
+            <param name="array">Input array to fill</param>
+            <param name="seed">Seed</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArray(System.Int32)">
+            <summary>Creates a 1d random DoubleArray of length size.</summary>
+            <param name="size">Length of vector</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArray(System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 random DoubleArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArray(System.Int32[])">
+            <summary>Creates a multi-dimension random DoubleArray.</summary>
+            <param name="sizes">Sizes</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArrayNorm(System.Int32)">
+            <summary>Creates a 1d Gaussian random DoubleArray of length size.</summary>
+            <param name="size">Length of vector</param>         
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArrayNorm(System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 Gaussian random DoubleArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArrayNorm(System.Int32[])">
+            <summary>Creates a multi-dimension Gaussian random DoubleArray.</summary>
+            <param name="sizes">Sizes</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomFloatArray(System.Int32)">
+            <summary>Creates a 1d random FloatArray of length size.</summary>
+            <param name="size">Length of vector</param>                 
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomFloatArray(System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 random FloatArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>          
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomFloatArray(System.Int32[])">
+            <summary>Creates a multi-dimension random FloatArray.</summary>
+            <param name="sizes">Sizes</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomIntArray(System.Int32,System.Int32)">
+            <summary>Creates a 1d random IntArray of length size and maximum value of maxInt.</summary>
+            <param name="size">Length of vector</param>
+            <param name="maxInt">Maximum value</param>          
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomIntArray(System.Int32,System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 random IntArray with maximum value of maxInt.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param> 
+            <param name="maxInt">Maximum value</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomIntArray(System.Int32[])">
+            <summary>Creates a multi-dimension random IntArray, with maximum value .</summary>
+            <param name="sizesAndMax">Sizes and maximum value</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomComplexArray(System.Int32)">
+            <summary>Creates a 1d random ComplexArray of length size.</summary>
+            <param name="size">Length of vector</param>                 
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomComplexArray(System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 random ComplexArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>          
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomComplexArray(System.Int32[])">
+            <summary>Creates a multi-dimension random ComplexArray.</summary>
+            <param name="sizes">Sizes</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandomSeed(ShoNS.Array.SparseDoubleArray,System.Int32,System.Single)">
+            <summary>Sets random seed to seed, then fills the input Array with random values using the RandomFactory.</summary>
+            <param name="matrix">Matrix to fill</param>
+            <param name="seed">Seed</param>
+            <param name="fillratio">Ratio of non-zero elements</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandomSeed(ShoNS.Array.SparseFloatArray,System.Int32,System.Single)">
+            <summary>Sets random seed to seed, then fills the input matrix with random values using the RandomFactory.</summary>
+            <param name="matrix">Matrix to fill</param>
+            <param name="seed">Seed</param>
+            <param name="fillratio">Ratio of non-zero elements</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.FillRandomSeed(ShoNS.Array.SparseIntArray,System.Int32,System.Int32,System.Single)">
+            <summary>Sets random seed to seed, then fills the input matrix with random values using the RandomFactory.</summary>
+            <param name="matrix">Matrix to fill</param>
+            <param name="seed">Seed</param>
+            <param name="maxint">Maximum value</param>
+            <param name="fillratio">Ratio of non-zero elements</param>    
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomSparseDoubleArray(System.Int32,System.Single)">
+            <summary>Creates a 1d random SparseDoubleArray of length size.</summary>
+            <param name="size">Length of vector</param>
+            <param name="fillratio">Ratio of non-zero elements</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArraySeed(System.Int32,System.Int32,System.Single)">
+            <summary>Creates a 1d random SparseDoubleArray of length size.</summary>
+            <param name="size">Length of vector</param>
+            <param name="seed">Seed</param>
+            <param name="fillratio">Ratio of non-zero elements</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomSparseDoubleArray(System.Int32,System.Int32,System.Single)">
+            <summary>Creates a size0 x size1 random SparseDoubleArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="fillratio">Ratio of non-zero elements</param>           
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArraySeed(System.Int32,System.Int32,System.Int32,System.Single)">
+            <summary>Creates a size0 x size1 random SparseDoubleArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="seed">Seed</param>
+            <param name="fillratio">Ratio of non-zero elements</param>           
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomSparseFloatArray(System.Int32,System.Single)">
+            <summary>Creates a 1d random SparseFloatArray of length size.</summary>
+            <param name="size">Length of vector</param>
+            <param name="fillratio">Ratio of non-zero elements</param>           
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomFloatArraySeed(System.Int32,System.Int32,System.Single)">
+            <summary>Creates a 1d random SparseFloatArray of length size.</summary>
+            <param name="size">Length of vector</param>
+            <param name="seed">Seed</param>
+            <param name="fillratio">Ratio of non-zero elements</param>           
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomSparseFloatArray(System.Int32,System.Int32,System.Single)">
+            <summary>Creates a size0 x size1 random SparseFloatArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="fillratio">Ratio of non-zero elements</param>                 
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomFloatArraySeed(System.Int32,System.Int32,System.Int32,System.Single)">
+            <summary>Creates a size0 x size1 random SparseFloatArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="seed">Seed</param>
+            <param name="fillratio">Ratio of non-zero elements</param>                 
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomSparseIntArray(System.Int32,System.Int32,System.Single)">
+            <summary>Creates a 1d random SparseIntArray of length size.</summary>
+            <param name="size">Length of vector</param>
+            <param name="maxint">Maximum value</param>
+            <param name="fillratio">Ratio of non-zero elements</param>           
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomIntArraySeed(System.Int32,System.Int32,System.Int32,System.Single)">
+            <summary>Creates a 1d random SparseIntArray of length size.</summary>
+            <param name="size">Length of vector</param>
+            <param name="seed">Seed</param>
+            <param name="maxint">Maximum value</param>
+            <param name="fillratio">Ratio of non-zero elements</param>           
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomSparseIntArray(System.Int32,System.Int32,System.Int32,System.Single)">
+            <summary>Creates a size0 x size1 random SparseIntArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="maxint">Maximum value</param>
+            <param name="fillratio">Ratio of non-zero elements</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomIntArraySeed(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+            <summary>Creates a size0 x size1 random SparseIntArray.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="seed">Seed</param>
+            <param name="maxint">Maximum value</param>
+            <param name="fillratio">Ratio of non-zero elements</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArraySeed(System.Int32,System.Int32)">
+            <summary>Creates a 1d random DoubleArray of length size, using the given random number generator seed.</summary>
+            <param name="size">Length of vector</param>
+            <param name="seed">Seed</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArraySeed(System.Int32,System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 random DoubleArray, using the given random number generator seed.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="seed">Seed</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArrayNormSeed(System.Int32,System.Int32)">
+            <summary>Creates a 1d Gaussian random DoubleArray of length size, using the given seed.</summary>
+            <param name="size">Length of vector</param>
+            <param name="seed">Seed</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomDoubleArrayNormSeed(System.Int32,System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 Gaussian random DoubleArray, using the given seed.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="seed">Seed</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomFloatArraySeed(System.Int32,System.Int32)">
+            <summary>Creates a 1d random FloatArray of length size, using the given random number generator seed.</summary>
+            <param name="size">Length of vector</param>
+            <param name="seed">Seed</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomFloatArraySeed(System.Int32,System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 random FloatArray, using the given random number generator seed.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="seed">Seed</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomIntArraySeed(System.Int32,System.Int32,System.Int32)">
+            <summary>Creates a 1d random IntArray of length size, using the given random number generator seed.</summary>
+            <param name="size">Length of vector</param>
+            <param name="seed">Seed</param>
+            <param name="maxint">Maximum value</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomIntArraySeed(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 random IntArray, using the given random number generator seed.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="seed">Seed</param>        
+            <param name="maxint">Maximum value</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomComplexArraySeed(System.Int32,System.Int32)">
+            <summary>Creates a 1d random ComplexArray of length size0, using the given random number generator seed.</summary>
+            <param name="size">Length of vector</param>
+            <param name="seed">Seed</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.ArrayRandom.RandomComplexArraySeed(System.Int32,System.Int32,System.Int32)">
+            <summary>Creates a size0 x size1 random ComplexArray, using the given random number generator seed.</summary>
+            <param name="size0">Number of rows</param>
+            <param name="size1">Number of columns</param>
+            <param name="seed">Seed</param>               
+        </member>
+        <member name="T:ShoNS.MathFunc.DoubleRange">
+            <summary>DoubleRange is an iterator that produces equally spaced
+            double numbers (in some range). DoubleRange is called "drange"
+            in python. Note that in python, you can specify the number of elements by initializing 
+            the Count parameter; for example, drange(0,1.0,Count=10).</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.#ctor">
+            <summary>Constructor by default produces DoubleRange
+            ("drange" in Python) starting at 0, ending at 0, with step=1</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor produces DoubleRange ("drange" in Python)
+            starting at LOW, ending at HIGH, with step=1</summary>
+            <param name="low">starting point of DoubleRange</param>
+            <param name="high">ending point (inclusive) of DoubleRange</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Constructor produces DoubleRange ("drange" in Python)
+            starting at LOW, ending at HIGH, with step=STEPSIZE</summary>
+            <param name="low">starting point of DoubleRange</param>
+            <param name="high">ending point (inclusive) of DoubleRange</param>
+            <param name="stepSize">step size of DoubleRange</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.Expand(System.Object)">
+            <summary>Expand DoubleRange ("drange" in Python) so that its
+            interval contains x. If x lies between existing Begin and End,
+            then this method does nothing. x is not guaranteed to be generated
+            by iteration.
+            </summary>
+            <param name="x">value that should be included in interval</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.Split(System.Int32)">
+            <summary>Split a DoubleRange ("drange" in Python) into a number
+            of equally-sized DoubleRanges that conver the same range.</summary>
+            <param name="numBuckets">Number of ranges to produce</param>
+            <returns>array of DoubleRanges</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.CompareTo(System.Object)">
+            <summary>Compare a DoubleRange ("drange" in Python) to another
+            object. If object is numeric, see if DoubleRange overlaps it.
+            If object is another DoubleRange, see if its center point
+            overlaps this DoubleRange.
+            </summary>
+            <param name="obj">object to comparew to</param>
+            <returns>-1 if this is below object,
+            0 if this contains object
+            1 if this is above object</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.GetEnumerator">
+            <summary>Return double enumerator over elements</summary>
+            <returns>IEnumerator[Double]</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Return object enumerator over elements</summary>
+            <returns>IEnuemrator</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.ToString">
+            <summary>Printable representation of DoubleRange ("drange" in Python)</summary>
+            <returns>printable string</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.op_Addition(ShoNS.MathFunc.DoubleRange,System.Double)">
+            <summary>Add a scalar double to a DoubleRange ("drange" in Python)</summary>
+            <param name="dr">DoubleRange to add to</param>
+            <param name="x">Value to add to both Begin and End</param>
+            <returns>new DoubleRange</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.op_Addition(System.Double,ShoNS.MathFunc.DoubleRange)">
+            <summary>Add a DoubleRange ("drange" in Python) to a double</summary>
+            <param name="x">Double to add to Begin and End of dr</param>
+            <param name="dr">DoubleRange to add to</param>
+            <returns>new DoubleRange</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.op_Subtraction(ShoNS.MathFunc.DoubleRange,System.Double)">
+            <summary>Subtract a scalar Double from a DoubleRange ("drange" in Python)</summary>
+            <param name="dr">DoubleRange to subtract from</param>
+            <param name="x">Double to subtract from Begin and End of dr</param>
+            <returns>new DoubleRange</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.op_Subtraction(System.Double,ShoNS.MathFunc.DoubleRange)">
+            <summary>Subtract a DoubleRange ("drange" in Python) from a scalar Double</summary>
+            <param name="x">Double to subtract from</param>
+            <param name="dr">DoubleRange to subtract.</param>
+            <returns>new DoubleRange (which descends if dr ascends, and visa versa)</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.op_UnaryNegation(ShoNS.MathFunc.DoubleRange)">
+            <summary>Negate a DoubleRange ("drange" in Python).
+            This negates Begin and End, and reverses the order of the range.
+            </summary>
+            <param name="dr">input DoubleRange</param>
+            <returns>negated DoubleRange</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.op_Multiply(ShoNS.MathFunc.DoubleRange,System.Double)">
+            <summary>Multiply DoubleRange ("drange" in Python) by a Double</summary>
+            <param name="dr">DoubleRange to multiply</param>
+            <param name="x">Double to multiply</param>
+            <returns>resulting DoubleRange</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.op_Multiply(System.Double,ShoNS.MathFunc.DoubleRange)">
+            <summary>Multiply DoubleRange ("drange" in Python) by a Double</summary>
+            <param name="dr">DoubleRange to multiply</param>
+            <param name="x">Double to multiply</param>
+            <returns>resulting DoubleRange</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.op_Division(ShoNS.MathFunc.DoubleRange,System.Double)">
+            <summary>Divide DoubleRange ("drange" in Python) by a Double</summary>
+            <param name="dr">DoubleRange to divide</param>
+            <param name="x">Double to divide by</param>
+            <returns>resulting DoubleRange</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.IndexOf(System.Double)">
+            <summary>Find an item in the DoubleRange iterator
+            ("drange" in Python). If item does not appear in iterator,
+            return highest index of iterator that would occur before item</summary>
+            <param name="item">Double to search for</param>
+            <returns>index of item, or highest previous index</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.Insert(System.Int32,System.Double)">
+            <summary>Insert not implemented</summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.RemoveAt(System.Int32)">
+            <summary>RemoveAt not implemented</summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.Add(System.Double)">
+            <summary>Add is not implemented</summary>
+            <param name="item">Item to add</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.Clear">
+            <summary>Clear is not implemented.</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.Contains(System.Double)">
+            <summary>Would DoubleRange ("drange" in Python) generate a value?
+            Computed in a round-off sensitive way, not with exact match.</summary>
+            <param name="item">value to find in DoubleRange</param>
+            <returns>true/false, would this value be generated?</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.CopyTo(System.Double[],System.Int32)">
+            <summary>Copy all values of a DoubleRange ("drange" in Python) to a System.Array</summary>
+            <param name="array">Array to copy into</param>
+            <param name="arrayIndex">Index of array to start the copy</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.Remove(System.Double)">
+            <summary>Remove is not implemented.</summary>
+            <param name="item">Item to remove</param>
+            <returns>true if the item was removed</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.System#Collections#IList#Contains(System.Object)">
+            <summary>Would DoubleRange ("drange" in Python) generate a value?
+            Computed in a round-off sensitive way, not with exact match.</summary>
+            <param name="value">value to find in DoubleRange</param>
+            <returns>true/false, would this value be generated?</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.System#Collections#IList#IndexOf(System.Object)">
+            <summary>Find an item's value in the DoubleRange iterator
+            ("drange" in Python). If item does not appear in iterator,
+            return highest index of iterator that would occur before item</summary>
+            <param name="value">object  to search for</param>
+            <returns>index of item, or highest previous index</returns>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRange.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>Copy all values of a DoubleRange ("drange" in Python) to a System.Array</summary>
+            <param name="array">Array to copy into</param>
+            <param name="index">Index of array to start the copy</param>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.Begin">
+            <summary>Property: starting value of DoubleRange ("drange" in Python)</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.End">
+            <summary>Property: ending value of DoubleRange ("drange" in Python)</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.Step">
+            <summary>Property: step size of DoubleRange ("drange" in Python)</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.Item(System.Int32)">
+            <summary>DoubleRange[index] (or "drange[index]" in Python)
+            returns the value that would occur if you iterated through the
+            DoubleRange index times.
+            </summary>
+            <param name="index">index to use</param>
+            <returns>Double</returns>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.Count">
+            <summary>Property: number of steps that the DoubleRange
+            ("drange" in Python) would iterate through. This property is
+            settable, to change the number of steps in the DoubleRange:
+            StepSize is automatically updated upon setting Count.</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.IsFixedSize">
+            <summary>DoubleRange does not have a fixed size.</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.IsReadOnly">
+            <summary>DoubleRange is not read-only.</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.System#Collections#IList#Item(System.Int32)">
+            <summary>DoubleRange[index] (or "drange[index]" in Python)
+            returns the value that would occur if you iterated through the
+            DoubleRange index times.
+            </summary>
+            <param name="index">index to use</param>
+            <returns>Double</returns>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.System#Collections#ICollection#Count">
+            <summary>Number of iteration steps in DoubleRange ("drange" in Python)</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRange.System#Collections#ICollection#IsSynchronized">
+            <summary>DoubleRange ("drange" in Python) is not thread-safe</summary>
+        </member>
+        <member name="T:ShoNS.MathFunc.DoubleRangeIterator">
+            <summary>DoubleRangeIterator is an IEnumerator over the elements of
+            a DoubleRange ("drange" in Python)</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRangeIterator.#ctor(ShoNS.MathFunc.DoubleRange)">
+            <summary>Construct a DoubleRangeIterator from a parent DoubleRange</summary>
+            <param name="thing">parent DoubleRange</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRangeIterator.Reset">
+            <summary>Reset iterator to beginning of DoubleRange</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.DoubleRangeIterator.MoveNext">
+            <summary>Move to the next element of the iterator</summary>
+            <returns>Whether the DoubleRange is exhausted</returns>
+        </member>
+        <member name="P:ShoNS.MathFunc.DoubleRangeIterator.Current">
+            <summary>Current (Double) value of iterator</summary>
+        </member>
+        <member name="T:ShoNS.MathFunc.Histogram">
+            <summary>A class for binning a collection and counting the number of items that fall into each bin.
+            If items are numeric, then histogram used non-zero-width intervals to bin them.
+            If items are categorical (i.e., integers, strings, etc.), then histogram will use
+            exact equality to perform the counts.</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.Histogram.#ctor(System.Collections.IEnumerable)">
+            <summary>Create a histogram using DATA, where the number of bins
+            is automatically computed from the data.</summary>
+            <param name="data">data to histogram</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Histogram.#ctor(System.Collections.IEnumerable,System.Int32)">
+            <summary>Create a histogram using DATA, where the number of bins
+            is NUMBINS (unless NUMBINS is &lt; 0,
+            where it is computed automatically)</summary>
+            <param name="data">data to histogram</param>
+            <param name="numBins">number of bins to use</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Histogram.#ctor(System.Collections.IEnumerable,System.Int32,System.Int32)">
+            <summary>Create a histogram using DATA, where the number of bins
+            is NUMBINS, unless NUMBINS is &lt; 0, in which case the number of
+            bins is computed automatically, subject to a maximum of MAXBINS
+            </summary>
+            <param name="data">data to histogram</param>
+            <param name="numBins">number of bins to use (-1 = automatic)</param>
+            <param name="maxBins">naximum number of bins to use</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Histogram.#ctor(System.Collections.IEnumerable,System.Collections.IList)">
+            <summary>Create a histogram with user-specified bin centers</summary>
+            <param name="data">data to histogram</param>
+            <param name="centers">centers of each bin to use</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Histogram.ToString">
+            <summary>Printable representation of histogram</summary>
+            <returns>printable string</returns>
+        </member>
+        <member name="P:ShoNS.MathFunc.Histogram.Status">
+            <summary>Is the histogram ready to use?</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.Histogram.BinCenter">
+            <summary>The centers of the bins used by the histogram. For
+            discrete data, these would be the values that are used for exact
+            matching. </summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.Histogram.Count">
+            <summary>Count array accumulated by the histogram (one count per bin).</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.Histogram.NumBins">
+            <summary>Number of bins used by histogram.</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.Histogram.NumPoints">
+            <summary>Number of points fed to histogram.</summary>
+        </member>
+        <member name="P:ShoNS.MathFunc.Histogram.IsDiscrete">
+            <summary>Whether or not this is a histogram over discrete (non-numeric) values</summary>
+        </member>
+        <member name="T:ShoNS.MathFunc.Poly">
+            <summary>This class implements polynomial fitting and evaluation.</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.#ctor">
+            <summary>Create a Poly object.</summary>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.#ctor(System.Int32)">
+            <summary>Create a Poly object for a polynomial of the given degree.</summary>
+            <param name="degree">Degree</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.#ctor(ShoNS.Array.DoubleArray)">
+            <summary>Create a Poly object with the given coefficients.</summary>
+            <param name="coeffIn">Coefficients</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.#ctor(System.Collections.IEnumerable)">
+            <summary>Create a Poly object with the given coefficients.</summary>
+            <param name="coeffIn">Coefficients</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.Fit(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>Fits x and y to a polynomial. The degree must be set via the construct or Degree prior to calling this method.</summary>
+            <param name="x">x-values to fit</param>
+            <param name="y">y-values to fit</param>        
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.Fit(ShoNS.Array.DoubleArray,ShoNS.Array.DoubleArray)">
+            <summary>Fits x and y to a polynomial. The degree must be set via the construct or Degree prior to calling this method.</summary>
+            <param name="x">x-values to fit</param>
+            <param name="y">y-values to fit</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.Val(System.Collections.IEnumerable)">
+            <summary>Evaluates the polynomial at x, where x is a list of values</summary>
+            <param name="x" type="object">The value or values at which to evaluate the polynomial.</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.Val(System.Double)">
+            <summary>Evaluates the polynomial at x, where x is a scalar.</summary>
+            <param name="x">The value at which to evaluate the polynomial.</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.PolyFit(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Int32)">
+            <summary>Fit the x and y values to a polynomial of degree n.</summary>
+            <param name="x">x-values to fit</param>
+            <param name="y">y-values to fit</param>
+            <param name="n">Degree of polynomial</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.PolyVal(System.Collections.IEnumerable,System.Double)">
+            <summary>Evaluate the input polynomial, p, at the value x: y = p(0) + p(1)*x + ... + p(n)*x^n</summary>
+            <param name="p">The polynomial, where the coefficients are in the order [p0, p1,...pn].</param>
+            <param name="x">The value.</param>
+        </member>
+        <member name="M:ShoNS.MathFunc.Poly.PolyVal(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>Evaluate the input polynomial, p, at the values in x: y = p(0) + p(1)*x + ... + p(n)*x^n</summary>
+            <param name="p">The polynomial, where the coefficients are in the order [p0, p1,...pn].</param>
+            <param name="x">The values.</param>
+        </member>
+        <member name="P:ShoNS.MathFunc.Poly.Degree">
+            <summary>Gets or sets the polynomial degree. Setting invalidates any previous coefficients.</summary>
+            <remarks>If you set the degree, any previous coefficients are no longer valid.</remarks>
+        </member>
+        <member name="P:ShoNS.MathFunc.Poly.Coeff">
+            <summary>Gets or sets the polynomial coefficients where the order is [p0, p1,...,pn].</summary>
+        </member>
+    </members>
+</doc>
