@@ -104,7 +104,8 @@ namespace BCIExplorer.Forms
 		{
 			cam.ZoomToPos( 20 * Sign( e.Delta ), e.Location.ToVector() );
 			UpdateViewportVariables();
-			InvalidateWindow();
+            UpdateColors();
+            InvalidateWindow();
 		}
 
 		private void Form_ChannelView_Resize( object sender, System.EventArgs e )
@@ -136,11 +137,13 @@ namespace BCIExplorer.Forms
 
 				case '1':
 					backgrounColor = DXColor.Gray;
-					break;
+                    InvalidateWindow();
+                    break;
 
 				case '2':
 					backgrounColor = DXColor.DarkGray;
-					break;
+                    InvalidateWindow();
+                    break;
 
 				case '3':
 					break;
@@ -155,7 +158,7 @@ namespace BCIExplorer.Forms
 			{
 				case MouseButtons.Left:
 					cam.InitMovement();
-					break;
+                    break;
 
 				case MouseButtons.Right:
 					if( epochs != null )
@@ -185,7 +188,8 @@ namespace BCIExplorer.Forms
 					{
 						cam.Position = new Vector2( 0, cam.Position.X );
 					}
-					break;
+                    UpdateColors();
+                    break;
 			}
 
 			if( Project.FilteredFile != null )
@@ -215,36 +219,42 @@ namespace BCIExplorer.Forms
 				}
 
 				if( pointedCluster != oldPointedCluster )
-				{
-					for( int i = startWindow; i < endWindow; i++ )
-					{
-						if( oldPointedCluster == indexToCluster[ i ] )
-						{
-							SetEpochColor( i, DXColor.Black );
-							if( clusterRects[ i ] != null )
-							{
-								clusterRects[ i ].Color = clusterColors[ i ];
-							}
-						}
-					}
-
-					for( int i = startWindow; i < endWindow; i++ )
-					{
-						if( pointedCluster == indexToCluster[ i ] )
-						{
-							SetEpochColor( i, DXColor.White );
-							if( clusterRects[ i ] != null )
-							{
-								clusterRects[ i ].Color = DXColor.White;
-							}
-						}
-					}
-				}
-			}
+                {
+                    UpdateColors();
+                }
+            }
 			InvalidateWindow();
 		}
 
-		private void xnaPanel_Resize( object sender, EventArgs e )
+        private void UpdateColors()
+        {
+            for (int i = startWindow; i < endWindow; i++)
+            {
+                if (clusterRects[i] != null)
+                {
+                    clusterRects[i].Color = clusterColors[i];
+                }
+
+                //if (oldPointedCluster == indexToCluster[i])
+                //{
+                    SetEpochColor(i, DXColor.Black);
+                //}
+            }
+
+            for (int i = startWindow; i < endWindow; i++)
+            {
+                if (pointedCluster == indexToCluster[i])
+                {
+                    SetEpochColor(i, DXColor.White);
+                    if (clusterRects[i] != null)
+                    {
+                        clusterRects[i].Color = DXColor.White;
+                    }
+                }
+            }
+        }
+
+        private void xnaPanel_Resize( object sender, EventArgs e )
 		{
 			cam.UpdateTransformations();
 		}
@@ -431,11 +441,15 @@ namespace BCIExplorer.Forms
 				return;
 			}
 
-			windowLoadQueue.Add( windowIndex );
-			if( !dataLoader.IsBusy )
-			{
-				dataLoader.RunWorkerAsync();
-			}
+            try
+            {
+                windowLoadQueue.Add(windowIndex);
+                if (!dataLoader.IsBusy)
+                {
+                    dataLoader.RunWorkerAsync();
+                }
+            }
+            catch {}
 		}
 
 		private void CreateWindow( int windowIndex )

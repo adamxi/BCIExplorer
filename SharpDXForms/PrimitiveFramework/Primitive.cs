@@ -353,15 +353,19 @@ namespace SharpDXForms.PrimitiveFramework
 			{
 				Matrix transform = GetTransformation();
 
-				for( int i = vertexPositionColors.Count; --i >= 0; )
-				{
-					VertexPositionColor vpc = vertexPositionColors[ i ];
-					Vector4 v4;
-					Vector3.Transform( ref vpc.Position, ref transform, out v4 );
-					vpc.Position = new Vector3( v4.X, v4.Y, v4.Z );
-					vpc.Color = color;
-					tranformedVPCs[ i ] = vpc;
-				}
+                try
+                {
+                    for (int i = vertexPositionColors.Count; --i >= 0;)
+                    {
+                        VertexPositionColor vpc = vertexPositionColors[i];
+                        Vector4 v4;
+                        Vector3.Transform(ref vpc.Position, ref transform, out v4);
+                        vpc.Position = new Vector3(v4.X, v4.Y, v4.Z);
+                        vpc.Color = color;
+                        tranformedVPCs[i] = vpc;
+                    }
+                }
+                catch {}
 
 				UpdateTransform = false;
 			}
